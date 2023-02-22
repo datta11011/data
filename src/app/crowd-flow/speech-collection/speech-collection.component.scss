@@ -1,0 +1,285 @@
+.fest-text {
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 38px;
+color: #0F0F0F;
+}
+
+.navbar {
+    background-color: #424242;
+
+}
+
+.bg-green {
+    color: #59BB5E;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.training-btn {
+    border-radius: 25px;
+    background-color: #DDF0DF;
+    height: 32px;
+    color: #16601A;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #16601A;
+}
+
+.progress-btn {
+    border-radius: 25px;
+    background: #2467AA;
+    height: 32px;
+    width: 80px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+}
+
+.time-btn {
+    border-radius: 25px;
+    background: white;
+    height: 32px;
+    width: 80px;
+    color: black;
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+color: #064377;
+}
+
+.collect-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0F0F0F;
+}
+
+.image-upload {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #0F0F0F;
+}
+
+.follow-task {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+}
+
+.max {
+    font-weight: bold;
+}
+
+.images-below {
+    color: #a3a3a3;
+    margin-top: revert;
+}
+
+
+
+.drag-text {
+    font-family: 'Inter', sans-serif;
+   font-weight: 400;
+    font-size: 17px;
+    color: #000000;
+}
+
+.navbar-1 {
+    background: #641321;
+    padding: 11px;
+}
+
+// .buttom-section {
+//     margin-top: 215px;
+// }
+
+.resp-space {
+    margin-top: 190px;
+}
+
+.submit-btn {
+    border-radius: 20px;
+    color: #FFFFFF;
+    width: 168px;
+    height: 41px;
+    background-color: #F7931E;
+    border: 2px solid white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.exit-btn {
+    border-radius: 20px;
+    background-color: #A72037;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+
+}
+
+.skip-btn {
+    border-radius: 20px;
+    color: black;
+    background-color: white;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    width: 108px;
+    height: 42px;
+}
+
+.Next-btn {
+    border-radius: 20px;
+    background: #DDF0DF;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    color: #16601A;
+    width: 135px;
+    height: 42px;
+}
+
+.card-header {
+    background-color: #f5f4f4;
+}
+
+.need-help {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #192A3E;
+}
+
+.chat-btn {
+    border-radius: 25px;
+    background-color: #448087;
+    color: white;
+    max-width: 210px;
+    margin: 1rem 0.4rem;
+}
+
+.paragraph-overflow {
+    max-height: 100px;
+    height: 100%;
+    overflow: auto;
+    margin-bottom: 1rem;
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #535353;
+}
+
+.card-header {
+    background-color: white;
+}
+
+.header-btns {
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    list-style: none;
+
+    li:nth-child(2) {
+        padding: 0 0.7rem;
+        margin: 0 1.2rem;
+        border-right: 2px solid #fff;
+    }
+}
+
+.orange-text {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;
+    color: #EB7A2A;
+}
+
+.diwali-1 {
+    border: 2px solid #9A9A9A;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.confirm-upload {
+    border-radius: 25px;
+    border: 1px solid #448087;
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #448087;
+    background-color: white;
+    width: 159px;
+    height: 42px;
+}
+.icons-speech{
+font-weight: bold;
+font-size: 16px;
+color: #2467AA;
+}
+.record-text{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 20px;
+color: #2467AA;
+}
+.zero{
+    font-weight: bold;
+    font-family: 'Inter', sans-serif;
+}
+.speech-play{
+    
+    .card{
+        background-color: #e6e3e3;
+       
+    }
+}
+.chats-btn{
+    border-radius: 25px;
+    background-color: #448087;
+    color: white;
+    width: 199px;
+    height: 41px;
+    margin: 1rem 0.4rem;
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 16px;
+color: #FFFFFF;
+}

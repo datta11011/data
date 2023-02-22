@@ -1,0 +1,96 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+      <h2 class="amazon-text mt-3"> {{clientDetails.result?.customerName}} </h2>
+      <div class="row justify-con my-4">
+        <div class="col-md-2">
+          <label for="tasktypes" class="task-type mb-0">Task Types</label>
+          <select ngModel class="form-select mt-1" (ngModelChange)="updateTaskType($event,serachTitle)"
+            [(ngModel)]='nrSelect'>
+            <option [value]="0">All</option>
+            <option *ngFor="let uType of getType?.result" [ngValue]="uType.id">{{uType.baseKeyValueName}}</option>
+          </select>
+        </div>
+        <div class="col-md-3 mt-auto">
+          <div class="searchbox">
+            <input type="Search" class="form-control" placeholder="Search" value="" (input)="getTasks($event)">
+            <span class="search-icon"><i class="fa fa-search"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="table-holder">
+        <table mat-table matSort [dataSource]="dataSource" multiTemplateDataRows class="mat-elevation-z8 demo-table">
+    
+          <ng-container matColumnDef="taskTitle">
+            <th class="header taskTitle-column" mat-header-cell *matHeaderCellDef><span>Task Title</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.title}}</td>
+          </ng-container>
+          <ng-container matColumnDef="taskType">
+            <th class="header taskType-column" mat-header-cell *matHeaderCellDef> <span>Task Type</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.typename}}
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="rating">
+            <th class="header rating-column" mat-header-cell *matHeaderCellDef> <span>Task Rating</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.rating}}</td>
+          </ng-container>
+          <ng-container matColumnDef="taskDuration">
+           <th class="header taskDuration-column" mat-header-cell *matHeaderCellDef> <span>Duration/ Task </span></th>
+            <td mat-cell *matCellDef="let element">{{element.taskDuration}}</td>
+          </ng-container>
+          <ng-container matColumnDef="taskCount">
+            <th class="header taskCount-column" mat-header-cell *matHeaderCellDef><span>Task Count</span> </th>
+            <td mat-cell *matCellDef="let element">10 </td>
+          </ng-container>
+          <ng-container matColumnDef="action">
+            <th class="header action-column" mat-header-cell *matHeaderCellDef> <span>Action</span> </th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon>more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="InstDialog()">Instructions</button>
+                <button mat-menu-item *ngxPermissionsOnly="['managerflow']"
+                  (click)="openDialogAssignTask(element.id)">Assign</button>
+              </mat-menu>
+              <span class="toggle-up collapsed" data-bs-toggle="collapse" (click)="showWorkflow(element.id, element)"
+                role="button">
+                <em class="fa fa-angle-down" *ngIf="expandedElement !== element"></em>
+                <em class="fa fa-angle-up" *ngIf="expandedElement === element"></em>
+              </span>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="expandedDetail">
+            <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+              <div style="display: block;" class="example-element-detail"
+                [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+                <ng-container *ngIf="element === expandedElement">
+                  <span class="table-description">
+                    <b> Description : </b>
+                    {{element.description}}
+                  </span>
+                  <span>
+                    <b>Created By :</b>
+                    {{element.createdBy}}
+                  </span>
+                </ng-container>
+              </div>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let element; columns: displayedColumns" class="example-element-row"
+            [class.example-expanded-row]="expandedElement === element"></tr>
+          <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+        </table>
+      </div>
+      <div class="paginate-bottom">
+        <mat-paginator [pageSize]="pageData.pageSize" [length]="totalRecordCount" [pageIndex]="pageData.pageIndex"
+          [pageSizeOptions]="[10, 20, 30, 50, 100]" (page)="onPaginateChange($event)" showFirstLastButtons>
+        </mat-paginator>
+      </div>
+    </div>
+    
+    </div>
+  </div>
+  

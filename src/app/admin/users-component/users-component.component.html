@@ -1,0 +1,200 @@
+<div class="container-fluid px-5">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10">
+ <!-- <div class="row mb-2 mt-5">
+    <div class="col-md-7 my-auto">
+      <h3 class="users-text mb-0">Users</h3>
+    </div>
+    <div class="col-md-5 font13">
+      <div class="d-flex f-right">
+        <span class="add-user-btn" (click)="usrDialog()"><img class="mx-1" src="../assets/images/add-user-icon.svg">Add
+          User</span>
+        <div class="create-btns">
+          <div class="text-center mt-2">
+            <span class="categories-btn" data-bs-toggle="dropdown">{{ getDropdownText() }} <i
+                class="fas fa-angle-down down-arrow"></i></span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="updateRoleAndStatus('STATUS', 0)">All</a></li>
+              <li><a class="dropdown-item" (click)="updateRoleAndStatus('STATUS', 1)">Active</a></li>
+              <li><a class="dropdown-item" (click)="updateRoleAndStatus('STATUS', 2)">Blocked</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="row my-4">
+    <div class="col-md-9">
+      <div class="flex-container">
+        <div>
+          <h3 class="users-text mb-0">Users</h3>
+        </div>
+        <div>
+          <div class="">
+            <span class="filterText">
+              <mat-icon class="filterIcon" [matMenuTriggerFor]="filter">filter_list</mat-icon> Filter By </span>
+              <mat-menu #filter="matMenu">
+                <button class="matMenuDef" mat-menu-item (click)="updateRoleAndStatus('STATUS', 0)">All</button>
+                <button class="matMenuDef" mat-menu-item (click)="updateRoleAndStatus('STATUS', 1)">Active</button>
+                <button class="matMenuDef" mat-menu-item (click)="updateRoleAndStatus('STATUS', 2)">Blocked</button>
+              </mat-menu>
+            <button class="addUser-btn"  (click)="usrDialog()"><img class="mx-1" src="../../../assets/images/addplus-icon.svg"> Add User </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="searchbox">
+        <input type="search" class="form-control" placeholder="Search" value="" (input)="getAllPersons($event)">
+        <span class="search-icon"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9">
+      <!-- <div class="amazon-tbl bg-white">
+        <table class="table mb-0">
+          <thead class="thead-bg">
+            <tr>
+              <th>Name</th>
+              <th>Role <span class="menu-icon" data-bs-toggle="dropdown"><i class="fas fa-bars"></i></span>
+                <ul  class="dropdown-menu">
+                  <li><a class="dropdown-item" (click)="updateRoleAndStatus('ROLE', 0)">All</a></li>
+                  <li *ngFor="let item of getRole?.result" class="dropdown-item" (click)="updateRoleAndStatus('ROLE', item.id)">
+                    {{ item.baseKeyValueName }}
+                  </li>
+                </ul>
+              </th>
+              <th>Onboarded On</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th></th>
+             </tr>
+          </thead>
+          <tbody *ngIf="this.AllPersons.length > 0; else message">
+              <tr *ngFor="let person of AllPersons">
+                <td>{{person.firstName}} {{person.lastName}}<strong>{{loggedinuserid==person.user.id ? ' (Me) ' : ''}}</strong></td>
+                <td>{{person.user.rolename}}</td>
+                <td>{{person.user.onboardDate | date:'MMM, dd yyyy'}}</td>
+                <td>{{person.email1}}</td>
+                <td>{{person.phone1}}</td>
+                <td><span class="badg bg-onboarded">{{person.user.statusname}}</span></td>
+                <td align="right" class="pos">
+                  <span class="vert-ellipse" data-bs-toggle="dropdown"><i class="fas fa-ellipsis-v"></i></span>
+                  <ul class="dropdown-menu dropdown-show cust-drop-menu">
+                    <li><button class="dropdown-item"  (click)="editUser(person.id)">Edit</button></li>
+                    <li><button class="dropdown-item"  [class]=" person.user.isEnable==1 ? '' : 'disabled' "   *ngIf="loggedinuserid!=person.user.id"  (click)="blockperson(person.id)">Block</button> </li>
+                    <li><button class="dropdown-item" (click)="onDeleteperson(person.id)" *ngIf="loggedinuserid!=person.user.id">Remove</button></li>
+                    <li><ng-container *ngIf="loggedinuserid== Superadminloggedinid"><button class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#demo" *ngIf="Manaagerid==person.user.roleId" (click)="assignTaskpage(person)">Allocate Task</button></ng-container></li>
+                    <li><ng-container *ngIf="loggedinuserid== Manaagerloggedinid"><button class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#demo" *ngIf="Manaagerid!=person.user.roleId" (click)="assignTaskpage(person)">Assign Task</button></ng-container> </li>
+                  </ul>
+                </td>
+              </tr>
+          </tbody>
+        </table>
+        <ng-template #message>
+          <p class="d-flex justify-content-center align-items-center mt-2">
+            No Users added yet </p>
+      </ng-template>
+      </div> -->
+      <div class="mat-elevation-z8 table-responsive">
+        <table mat-table [dataSource]="dataSource">
+
+          <!-- name Column -->
+          <ng-container matColumnDef="name">
+            <th class="header taskTitle-column" mat-header-cell *matHeaderCellDef><span>Name</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.firstName}} {{element.lastName}}<strong>
+                {{loggedInUserId==element.user.id ? ' (Me) ' : ''}}</strong></td>
+          </ng-container>
+
+          <!-- role Column -->
+          <ng-container matColumnDef="role">
+            <th class="header taskType-column" mat-header-cell *matHeaderCellDef>
+              <span>Role <button mat-icon-button [matMenuTriggerFor]="menu">
+                  <mat-icon>filter_list</mat-icon>
+                </button></span>
+              <mat-menu #menu="matMenu">
+                <button class="matMenuDef" mat-menu-item (click)="updateRoleAndStatus('ROLE', 0)">All</button>
+                <button class="matMenuDef" mat-menu-item *ngFor="let item of getRole?.result"
+                  (click)="updateRoleAndStatus('ROLE', item.id)">{{item.baseKeyValueName}}</button>
+              </mat-menu>
+            </th>
+            <td mat-cell *matCellDef="let element">{{element.user.rolename}}</td>
+          </ng-container>
+
+
+          <!-- email Column -->
+          <ng-container matColumnDef="email">
+            <th class="header taskDuration-column" mat-header-cell *matHeaderCellDef> <span>Email </span></th>
+            <td mat-cell *matCellDef="let element">{{element.email1}}</td>
+          </ng-container>
+
+          <!-- phone Column -->
+          <ng-container matColumnDef="phone">
+            <th class="header taskCount-column" mat-header-cell *matHeaderCellDef><span>Phone</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.phone1}}</td>
+          </ng-container>
+
+          <!-- onBoardedOn Column -->
+          <ng-container matColumnDef="onBoardedOn">
+            <th class="header rating-column" mat-header-cell *matHeaderCellDef> <span>Onboarded On</span> </th>
+            <td mat-cell *matCellDef="let element">{{element.user.onboardDate | date:'MMM, dd yyyy'}}</td>
+          </ng-container>
+
+          <!-- status Column -->
+          <ng-container matColumnDef="status">
+            <th class="header taskCount-column" mat-header-cell *matHeaderCellDef><span>Status</span> </th>
+            <td mat-cell *matCellDef="let element"> <span class="bg-onboarded">{{element.user.statusname}}</span></td>
+          </ng-container>
+
+          <!-- action Column -->
+          <ng-container matColumnDef="action">
+            <th class="header action-column" mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-icon-button [matMenuTriggerFor]="menu">
+                <mat-icon class="vert-ellipse">more_vert</mat-icon>
+              </button>
+              <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="editUser(element.id)">Edit</button>
+                <button mat-menu-item (click)="sendInvitation(element.id)">Send Invitation</button>
+                <button mat-menu-item [class]=" element.user.isEnable==1 ? '' : 'disabled' "
+                  *ngIf="loggedInUserId!=element.user.id" (click)="blockPerson(element.id)">Block</button>
+                <button mat-menu-item (click)="onDeletePerson(element.id)"
+                  *ngIf="loggedInUserId!=element.user.id">Remove</button>
+                <button mat-menu-item (click)="assignTaskPage(element)"
+                  *ngIf="loggedInUserId== superAdminLoggedInId && ManagerId == element.user.roleId && (UserStatusId == element.user.statusId || ActiveUserStatus == element.user.statusId)">
+                  Allocate Task</button>
+                <button mat-menu-item (click)="assignTaskPage(element)"
+                  *ngIf="loggedInUserId== managerLoggedInId && ManagerId!=element.user.roleId">Assign Task</button>
+              </mat-menu>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let element columns: displayedColumns;" class="example-element-row"></tr>
+        </table>
+        <mat-paginator [pageSize]="pageData.pageSize" [length]="totalRecordCount" [pageIndex]="pageData.pageIndex"
+          [pageSizeOptions]="[5, 10, 20, 30, 50, 100]" (page)="onPaginateChange($event)" showFirstLastButtons>
+        </mat-paginator>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div *ngIf="loggedInUserId== superAdminLoggedInId">
+        <iframe title="User(Super Admin Report)" width="100%" height="600"
+          src="https://app.powerbi.com/reportEmbed?reportId=f98f1315-37cf-4742-ba7f-9d7f29cfcfc4&autoAuth=true&ctid=31386ae4-e5c5-4956-80b9-3868597721b3"
+          frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+      <div *ngIf="loggedInUserId== managerLoggedInId">
+        <iframe title="User(Super Admin Report)" width="100%" height="600"
+          src="https://app.powerbi.com/reportEmbed?reportId=4eb76085-d141-427f-89a0-53a747abdb54&autoAuth=true&ctid=31386ae4-e5c5-4956-80b9-3868597721b3"
+          frameborder="0" allowFullScreen="true"></iframe>
+      </div>
+    </div>
+  </div>
+
+    </div>
+  </div>
+ 
+  </div>

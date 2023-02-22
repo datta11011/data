@@ -1,0 +1,155 @@
+.thead-bg{
+  background-color: #f0f0f0;
+}
+
+th{
+  border-bottom: 2px solid transparent !important;
+}
+.eye-color{
+    color: #448087;
+    cursor: pointer;
+  }
+.manager-tbl{
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.edit-icon i{
+    margin-left: .6rem;
+    color: #9A9A9A;
+}
+a {
+    color: #2467AA;
+    text-decoration: none;
+    font-size: 16px;
+  }
+.dashboard-bg{
+  color: #2467AA;
+  cursor: pointer;
+}
+.bg-user{
+  color: #2467AA;
+  cursor: pointer;
+}
+
+// .table thead th{
+//   min-width: 175px;
+// }
+// .table tbody td{
+//   min-width: 178px;
+// }
+.searchbox{
+  position: relative;
+  .search-icon{
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    opacity: 0.5;
+  }
+  input{
+    padding: 1.3rem;
+    box-shadow: none;
+    border-radius: 30px;
+  }
+}
+.f-right{
+  float: right;
+}
+// .footer-pos{
+//   position: fixed;
+//   left: 0;
+//   bottom: 0;
+//   width: 100%;
+// }
+.bg-active{
+  background-color: #ECF8FF;
+  color: #2467AA;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+.add-user-btn{
+  background: #448087;
+  color: #fff;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #448087;
+  border-radius: 30px;
+  cursor: pointer;
+  align-self: center;
+  min-width: 130px;
+  text-align: center;
+  margin-right: 1.5rem;
+}
+.display{
+  display: flex;
+  border: none;
+}
+.blockbtn{
+  color: #448087;
+  background-color: #fff;
+  padding: 0.1rem 1.0rem;
+  border: 1px solid #448087;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 1rem;
+  min-width: 92px;
+  i{
+    font-size: 14px;
+    color: #448087;
+  }
+}
+.table thead th{
+  min-width: 180px;
+}
+.edit-pen{
+  margin-right: 1rem;
+  color: #448087;
+  cursor: pointer;
+  padding: 0.1rem 1.0rem;
+  border-radius: 30px;
+  border: 1px solid #448087;
+  min-width: 92px;
+  i{
+    font-size: 15px;
+    color: #448087;
+    margin-right: 0.5rem;
+  }
+}
+.resp-width{
+  min-width: 265px;
+}
+
+.product-text {
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 25px;
+line-height: 38px;
+display: flex;
+align-items: center;
+color: #0F0F0F;
+
+}
+
+.assigned{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 26px;
+display: flex;
+align-items: center;
+color: #212121;
+}
+.task-manager {
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 26px;
+display: flex;
+align-items: center;
+color: #212121;
+}
+.footer{
+  margin-top: 200px;
+}

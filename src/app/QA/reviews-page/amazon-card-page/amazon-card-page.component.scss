@@ -1,0 +1,244 @@
+.card-body {
+  width: 100%;
+  height: 100%;
+}
+
+.amazon-card {
+  box-shadow: 1px 3px 3px 0px #bebebe;
+  margin-bottom: 1.5rem;
+  
+  .card-header {
+    background: #fff;
+    padding: 1rem;
+  }
+}
+
+.searchbox {
+  position: relative;
+  margin-left: 1rem;
+
+  .search-icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    opacity: 0.5;
+  }
+
+  input {
+    padding: 1.3rem;
+    box-shadow: none;
+    border-radius: 30px;
+  }
+}
+
+.justify-con {
+  justify-content: space-between;
+}
+.nav{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 26px;
+/* or 130% */
+
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+  .nav-link{
+      &:hover{
+          background-color: #ECF8FF;
+          border: 2px solid #1BA0F2;
+      }
+  }
+ 
+}
+.all-text{
+  background-color: #ECF8FF;
+  border: 2px solid #1BA0F2;
+}
+
+.pricetag-icon {
+  height: 14px;
+  margin-top: 0.3rem;
+  margin-right: .5rem;
+}
+
+.exam-label {
+  font-weight: bold;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #535353;
+  margin-top: 0.2rem;
+}
+
+.rating-value {
+  color: #2467AA;
+  font-weight: bold;
+  margin-left: 4px;
+}
+
+.line-ul {
+  justify-content: space-between;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 13px;
+  padding: 5px;
+  display: flex;
+
+
+  ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .car img {
+    margin-right: 0.5rem;
+    vertical-align: sub;
+  }
+
+  .clock img {
+    margin-right: 0.5rem;
+    vertical-align: sub;
+  }
+
+  .polyline img {
+    margin-left: 0.5rem;
+  }
+}
+
+.taskul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font-weight: 400;
+  display: flex;
+  margin-left: -10px;
+  .taskbg {
+    background-color: #DDF0DF;
+    padding: 0.3rem 0.5rem 0.2rem 0.4rem;
+    border-radius: 50px;
+    margin-left: 0.4rem;
+    font-size: 13px;
+    font-weight: bold;
+  }
+}
+
+.toggle-up {
+  background-color: #ECF8FF;
+  padding: 0px 7px;
+  border: 1px solid #6D6D6D;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #2467AA;
+  float: right;
+}
+
+.cust-p {
+  font-size: 14px;
+  color: #0F0F0F;
+}
+
+.cardbtns {
+  .btn {
+    border-radius: 26px;
+    padding: .2rem 1rem;
+    font-size: 14px;
+    height: 35px;
+    min-width: 150px;
+    box-shadow: none !important;
+
+    &:hover {
+      transition: .5s;
+    }
+  }
+
+  .instruction-btn {
+    border: 2px solid #A72037;
+    color: #fff;
+    background-color: #A72037;
+  }
+}
+
+.card-space {
+  margin-bottom: 2rem;
+}
+.tasks-txt{
+  font-size: 12px;
+}
+
+@media (min-width: 768px) and (max-width: 1400px) {
+  .line-ul {
+    display: block;
+    line-height: 2.3;
+  }
+
+  .cardbtns .btn {
+    min-width: 110px;
+  }
+}
+
+@media (max-width:1199px) {
+  .max-length {
+    max-width: 100px;
+  }
+  .padd-task{
+    padding: 0px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .max-length {
+    max-width: 150px;
+  }
+}
+
+.max-length {
+  max-width: 180px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.amazon-text {
+  font-weight: bold;
+  font-size: 21px;
+  color: #0F0F0F;
+}
+
+
+.Lane-alignment {
+  width: 400px;
+  height: 26px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+.rating {
+  margin-top: 0.2rem;
+  font-weight: 400;
+  font-size: 13px;
+  color: #6A707E;
+}
+
+.fa-angle-down {
+  width: 13px;
+  height: 10px;
+}
+
+.footer{
+  margin-top: 450px;
+}

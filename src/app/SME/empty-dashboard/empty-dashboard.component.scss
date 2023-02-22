@@ -1,0 +1,336 @@
+
+.bgblue-color {
+  background-color: #448087;
+  padding: 1%;
+}
+.bgBody-color{
+background-color: #F9F9F9;
+}
+
+.footer{
+  margin-top: 159px;
+}
+
+.month {
+    color: skyblue;
+  }
+  .font25{
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 76px;
+    color: #0F0F0F;
+  }
+  .active {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .card-header{
+    background-color: #fff;
+    
+  }
+  .clr-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #192A3E;
+  }
+  .selectmonth{
+    padding: 0;
+    min-width: 120px;
+    margin-left: auto;
+    border: none;
+    display: flex; 
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+color: #6A707E;
+    .form-select{
+      border: none;
+      padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+      color: #2dc4ff;
+      box-shadow: none !important;
+      text-align: left;
+      font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+    }
+   
+  }
+
+  .font13{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+  }
+  .form-select{
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+      background-position: calc(100% - 12px) center !important;
+      background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+      padding: 8px 32px 8px 16px;
+     
+  }
+  /* To remove the arrow of select element in IE */
+  .form-select::-ms-expand {
+    display: none;
+  }
+  .internal-pad{
+    font-size: 16px;
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+    border: 4px solid #59BB5E;
+    margin-top: -42px;
+  }
+  
+  
+  
+  @media screen and (max-width:768px) {
+  
+    .status-color{
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  .User-onboarded{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  color: #192A3E;
+  }
+
+  
+
+  .side-text{
+    font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #192A3E;
+  }
+
+  
+  
+  @media screen and (max-width:768px) {
+  
+    .status-color{
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  .User-onboarded{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 26px;
+    color: #192A3E;
+  }
+  .program-text{
+    font-family: 'Inter', sans-serif;
+font-weight: bold;
+font-size: 15px;
+color: rgba(0, 0, 0, 0.6);
+  }
+
+  .time-text{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 16px;    
+    color: rgba(0, 0, 0, 0.6);
+  }
+.zero{
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  color: #0F0F0F;
+}
+.available-text{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #BAB9BD;
+}
+
+// .progress{
+//     height: 5px;
+//     background-color: #ccc;
+// }
+.range-count{
+    list-style: none;
+    padding: 0;
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+}
+.f-right{
+    float: right;
+  }
+  h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  
+  .admin-type{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+  }
+  .progess-status{
+   justify-content: space-evenly;
+  }
+  .card-header{
+    background-color: #FFFFFF;
+  
+  }
+  .profile-text{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+  }
+  .progress-bar{
+   
+    color: #2E7D32;
+  }
+  .completed-txt{
+    color: #2E7D32;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .completed{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+color: #2E7D32;
+
+  }
+  
+  .profile{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #192A3E;
+  }
+  
+  .user-name{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #000000;
+  }
+  
+  .percentage{
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #6D6D6D;
+  }
+  .profile-p{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #374151;
+  }
+
+  .Complete-btn{
+    border-radius: 20px;
+    background-color: #A72037;
+    color: white;
+  }
+  .zero-number{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #424242;
+  }
+  .review-text{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #535353;
+  }
+  .resp-space-1{
+    height: 269px;
+  }
+
+  .footer-end{
+    margin-top: 350px;
+  }
+  .top-contact{
+    margin-bottom: -13px;
+  }
+  .p-name{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 20px;
+color: #374151;
+  }
+
+  .hi-user{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 38px;
+    color: #FFFFFF;
+}
+.people-text{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}

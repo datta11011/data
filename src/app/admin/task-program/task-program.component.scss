@@ -1,0 +1,343 @@
+.checkbox {
+  margin: 0.5rem;
+}
+.bginput-grey {
+  background-color: #f0f0f0;
+}
+
+.cross-icon{
+  cursor: pointer;
+}
+.createbtn {
+  background-color: #a72037;
+  color: #fff;
+  border: 1px solid #a72037;
+  border-radius: 40px;
+  width: 110px;
+  padding: 7px 0px;
+  /* height: 39px;*/
+}
+.cancelbtn {
+  background-color: transparent;
+  color: #a72037;
+  border: 1px solid #a72037;
+  border-radius: 40px;
+  width: 120px;
+  padding: 7px;
+  /* height: 39px; */
+   font-family: "Inter', sans-serif";
+  /* font-style: normal; */
+  font-weight: bold;
+  font-size: 16px;
+  /* line-height: 19px; */
+  color: #a72037;
+}
+.selected-text {
+  font-size: 12px;
+}
+.star-mark {
+  color: #a72037;
+  font-size: 16px;
+}
+
+.upload-files {
+  color: dodgerblue;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 0;
+  border: 1px solid;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+}
+
+.width_100{
+  width: 100%;
+}
+
+label {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+textarea {
+  border-color: #d9d9d9;
+}
+.paragraph-color {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+.close {
+  background-color: #575656;
+  color: white;
+  border-radius: 27px;
+  padding: 6px;
+  width: 24px;
+  font-size: 11px;
+}
+
+.bginput-grey {
+  width: 100%;
+}
+.G-url {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #1ba0f2;
+}
+.text-box {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #424242;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 5px;
+  li {
+    margin-right: 1.5rem;
+    a {
+      text-decoration: none;
+      color: #505050;
+    }
+  }
+}
+.addclient-txt {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.form-control {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+.form-select {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #424242;
+}
+
+option {
+  font-weight: 500;
+  align-items: center;
+}
+
+.paragraph-color-1 {
+ font-weight: 400;
+  font-size: 17px;
+  color: #6d6d6d;
+}
+// ::ng-deep .mat-select-panel { margin-top: 42px !important; }
+.mat-select {
+  border: 1px solid #ccc;
+  padding: 0.3em 0.5em;
+  background: #fff;
+  font-family: 'Inter', sans-serif;
+}
+.mat-form-field {
+  width: 100%;
+}
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0px !important;
+  padding: 0em 0.5em !important;
+}
+::ng-deep .mat-form-field-infix {
+  padding: 0.2em 0 !important;
+  border-top: none;
+}
+
+.mat-select-value {
+  margin-top: -20px;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #1ba0f2;
+}
+.task-id {
+  width: 100%;
+}
+.categories-check {
+  margin-top: -10px;
+}
+.paragraph-color-2 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+
+.Message-icon-1 {
+  cursor: pointer;
+}
+.copy-icon-1 {
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: 2px solid #a72037;
+  color: #a72037;
+  border-radius: 20px;
+  width: 114px;
+}
+.send-btn {
+  background-color: #a72037;
+  color: white;
+  border-radius: 20px;
+  width: 144px;
+}
+.send-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  /* or 130% */
+
+  display: flex;
+  align-items: center;
+
+  /* black */
+
+  color: #192a3e;
+}
+.task-text-1 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+.task-text-2 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+.task-text-3 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6d6d6d;
+}
+.task-text-4 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+.task-text-5 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+.task-text-6 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+.task-text-7 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6d6d6d;
+}
+.task-text-8 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1ba0f2;
+}
+.line {
+  width: 100%;
+  height: 1px;
+  background: #ebeff2;
+}
+.select-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  color: #6d6d6d;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+.btn-close {
+  background-color: #3f3f3f;
+  border-radius: 27px;
+  padding: 7px;
+  width: 12px;
+  color: white;
+  font-size: 11px;
+}

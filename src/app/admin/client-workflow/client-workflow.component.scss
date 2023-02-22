@@ -1,0 +1,389 @@
+.table {
+  margin-bottom: 0px !important;
+}
+
+.vert-ellipse {
+  margin-right: 1rem;
+  cursor: pointer;
+
+  i {
+    font-size: 14px;
+    color: #2467aa;
+  }
+}
+
+.toggle-up {
+  background-color: #ecf8ff;
+  padding: 1px 6px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 1rem;
+
+  i {
+    font-size: 14px;
+    color: #2467aa;
+  }
+}
+
+.create-workflow-btn {
+  background: #fff;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #A72037;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: center;
+  min-width: 163px;
+  text-align: center;
+  font-family: "Inter', sans-serif";
+  font-style: bold;
+  font-weight: bold;
+  font-size: 14px;
+  color: #A72037;
+}
+
+.searchbox {
+  position: relative;
+  margin-left: 1rem;
+
+  .search-icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    opacity: 0.5;
+  }
+
+  input {
+    padding: 1.3rem;
+    box-shadow: none;
+    // border-radius: 25px;
+  }
+}
+
+.f-right {
+  float: right;
+}
+
+.font13 {
+  font-size: 13px;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+.amazon-subtable {
+  padding: 0 2rem;
+}
+
+.amazon01desc {
+  margin-bottom: 2rem;
+}
+
+.model-popup {
+  cursor: pointer;
+}
+
+// .modal-backdrop{
+// position: absolute;
+// }
+th {
+  border-bottom: 2px solid transparent !important;
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: bold;
+  font-size: 16px;
+}
+
+// .dropdown-item:hover {
+//   color: #1ba0f2;
+//   background-color: #ecf8ff;
+// }
+// .dropdown-item {
+//   font-family: "Inter', sans-serif";
+//  font-weight: bold;
+//   font-size: 14px;
+//   line-height: 20px;
+//   align-items: center;
+//   color: #535353;
+//   cursor: pointer;
+// }
+.dropdown {
+  margin-right: 19px;
+  cursor: pointer;
+}
+
+// .dropdown-item{
+// width: 60%;
+// }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.client-workflows {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #0f0f0f;
+}
+
+.cust-drop-menu-1 {
+  float: inline-start;
+  margin-top: 8px;
+}
+
+// .form-control {
+//   font-weight: bold;
+//   color: #9a9a9a;
+// }
+
+td {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #212121;
+}
+
+.cancel-btn {
+  border: 1px solid #a72037;
+  color: #a72037;
+  border-radius: 50px;
+  width: 100px;
+}
+
+.send-btn {
+  background-color: #a72037;
+  color: white;
+  border-radius: 50px;
+  width: 130px;
+}
+
+.send-text {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  /* or 130% */
+
+  display: flex;
+  align-items: center;
+
+  /* black */
+
+  color: #192a3e;
+}
+
+.task-text-1 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+
+.task-text-2 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+
+.task-text-3 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6d6d6d;
+}
+
+.task-text-4 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+
+.task-text-5 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+
+.task-text-6 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #535353;
+}
+
+.task-text-7 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6d6d6d;
+}
+
+.task-text-8 {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1ba0f2;
+}
+
+.line {
+  width: 100%;
+  height: 1px;
+  background: #ebeff2;
+}
+
+.select-text {
+  font-family: "Inter', sans-serif";
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.btn-close {
+  font-size: 11px;
+}
+
+@media screen and (min-width: 991px) and (max-width: 1064px) {
+  .create-workflow-btn {
+    padding: 0.4rem 0.4rem;
+  }
+}
+
+.footer {
+  margin-top: 340px;
+}
+
+.currently-text {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  color: #6d6d6d;
+}
+
+.succesfully-text {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+  text-align: center;
+}
+
+.modal-title {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #192a3e;
+}
+
+.workflow-tables table {
+  box-shadow: none;
+}
+
+.modal {
+  width: 105%;
+}
+
+.disabled {
+  color: #ccc;
+}
+
+.mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0px !important;
+  padding: 0em 0.5em !important;
+}
+
+::ng-deep .mat-form-field-infix {
+  padding: 0.2em 0 !important;
+  border-top: none;
+}
+
+.mat-select-value {
+  margin-top: -20px;
+}
+
+.Search_input {
+  margin-top: 1px;
+  border: transparent;
+  outline: transparent;
+  background: #fafbfd 0% 0% no-repeat padding-box;
+}
+
+.scrollbar {
+  height: 150px;
+  overflow-y: scroll;
+
+}
+
+::-webkit-scrollbar {
+  background-color: rgb(221, 217, 217);
+  border-radius: 50px;
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(161, 161, 161);
+  border-radius: 10px;
+}
+
+.example-detail-row {
+  height: 0px;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.client-info-text{
+  font-family: "Inter', sans-serif";
+font-weight: 500;
+font-size: 16px;
+color: #343434;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}

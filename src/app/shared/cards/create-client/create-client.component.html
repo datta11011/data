@@ -1,0 +1,200 @@
+<div class="container">
+  <div class="text-end mb-1">
+    <span class="cross-icon" (click)="onNoClick()"><i class="fas fa-times-circle"></i></span>
+  </div>
+  <div class="mb-3">
+    <h4 class="add-client mb-0">Create a Workflow</h4>
+  </div>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm)">
+    <div class="row p-0">
+      <div class="col-md-6 mb-2">
+        <mat-label class="form-label mandatory">Client Name <span class="star-mark"> *</span></mat-label>
+        <input placeholder="Enter Client Name" formControlName="customerName" class="form-control" autocomplete="off"
+          pattern="[a-zA-Z][a-zA-Z ]+" (input)="fetchClientNames($event)" required [ngClass]="{'is-invalid': (registerForm.get('customerName').touched ||
+          registerForm.get('customerName').dirty) &&     !registerForm.get('customerName').valid }" />
+        <span class="invalid-feedback">
+          <span *ngIf="registerForm.get('customerName').errors?.required">
+            Client Name is Required. Minimum 2 and Maximum 15 Alpha Characters Allowed.
+          </span>
+          <span *ngIf="registerForm.get('customerName').errors?.pattern">
+            please enter Alpha Characters Allowed.
+          </span>
+        </span>
+        <div *ngIf="clientnames && clientnames.length > 0">
+          <p *ngFor="let el of clientnames" (click)="selectCustomer(el)">{{el['customerName']}}</p>
+        </div>
+        <!-- <input type="name" class="form-control"  formControlName="customerName"
+          [ngClass]="{ 'is-invalid': submitted && f.customerName.errors }" (input)="fetchClientNames($event)"> -->
+        <!-- <div *ngIf="submitted && f.customerName.errors" class="invalid-feedback">
+          <div *ngIf="f.customerName.errors.required">
+            Client Name is Required. Minimum 2 and Maximum 15 Alpha Characters Allowed.</div>
+        </div> -->
+      </div>
+
+      <div class="col-md-6 mb-2">
+        <mat-label class="form-label mandatory">Client Code <span class="star-mark"> *</span></mat-label>
+        <input placeholder="Enter Client Code" formControlName="code" class="form-control" autocomplete="off"
+          (input)="validateClientCode($event)" (keypress)="keyPress($event)" [ngClass]="{'is-invalid': registerForm.get('code').errors ||
+      ((registerForm.get('code').touched ||  registerForm.get('code').dirty) &&
+       !registerForm.get('code').valid) }" >
+        <span class="invalid-feedback">
+          <span *ngIf="registerForm.get('program.poNumber').errors?.required">
+            Please Enter Client Code.
+          </span>
+        </span>
+        <span class="danger-feedback" *ngIf="isClientCodeExists">Client Code is already exists..! change Client </span>
+      </div>
+
+
+      <div class="col-md-6 mb-3" formGroupName="program">
+        <label for="name" class="form-label">PO Number <span class="star-mark"> *</span></label>
+        <input placeholder="Enter PO number" formControlName="poNumber" class="form-control" autocomplete="off"
+          (input)="validatepoNumber($event)" [ngClass]="{'is-invalid': registerForm.get('program').errors ||
+        ((registerForm.get('program.poNumber').touched ||  registerForm.get('program.poNumber').dirty) &&
+         !registerForm.get('program.poNumber').valid) }">
+        <span class="invalid-feedback">
+          <span *ngIf="registerForm.get('program.poNumber').errors?.required">
+            Please Enter PO Number.
+          </span>
+        </span>
+        <span class="danger-feedback" *ngIf="isPoNumberExist">PO number is already exists..! change number </span>
+      </div>
+
+      <div class="col-md-6">
+        <mat-label for="poid" class="form-label"> WorkFlow ID<span class="star-mark"> *</span>
+        </mat-label>
+        <input type="text" [readOnly]="true" class="form-control" placeholder="WorkFlow ID" value="{{workflowID}}">
+      </div>
+
+      <div class="col-md-6" formGroupName="program">
+        <mat-label for="LocationType">Location <span class="star-mark">*</span></mat-label>
+        <mat-select class="asset-form-control" placeholder="Select" formControlName="locationId">
+          <!-- (selectionChange)="handleLocationUpdate($event)"> -->
+          <mat-option *ngFor="let el of getDropdown?.result" [value]="el.id">{{el.baseKeyValueName}}</mat-option>
+        </mat-select>
+      </div>
+
+      <div class="col-md-6" formGroupName="program">
+        <mat-label for="ContactType">Contact <span class="star-mark">*</span></mat-label>
+        <!-- <mat-form-field> -->
+        <mat-select multiple class="asset-form-control" formControlName="contactSelection" placeholder="Select"
+          [(ngModel)]="checkedContact" (selectionChange)="handleSelectionChange()">
+          <mat-option *ngFor="let el of selectClientContacts" [value]="el.id">{{el.personName}}</mat-option>
+        </mat-select>
+        <!-- </mat-form-field> -->
+      </div>
+
+
+      <div class="col-12 mt-3 text-end" (click)="initAddContactForm()">
+        <button type="button" class="AddContact-btn" #closebutton data-bs-toggle="collapse"
+          [disabled]="!hadPoNumberCreated" data-bs-target="#collapseClient"><img
+            src="../../../../assets/images/user-icon1.png" width="15px"> Add New Contact </button>
+      </div>
+      <div class="collapse" id="collapseClient">
+        <div class="card card-body mt-3 clientBodyBg">
+          <span class="mb-2 add-contact">Add New Contact</span>
+          <form [formGroup]="AddContactForm" (ngSubmit)="contactForm(AddContactForm)">
+            <div class="row">
+              <div class="col-md-6">
+                <label for="client-name" class="form-label">Name <span class="star-mark"> *</span></label>
+                <input type="text" class="form-control" id="name"
+                  (keypress)="keyPressAlphaNumericWithCharacters($event)" formControlName="personName" maxlength="15"
+                  [ngClass]="{ 'is-invalid': csubmitted && e['personName'].errors }">
+                <div *ngIf="csubmitted && e['personName'].errors" class="invalid-feedback">
+                  <div *ngIf="e['personName'].errors['required']">First Name is required</div>
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email <span class="star-mark"> *</span></label>
+                <input type="email" class="form-control" id="email" formControlName="email"
+                  (input)="validateEmailPhone($event,2)"
+                  [ngClass]="{ 'is-invalid': csubmitted && e['email'].errors || isEmailExists}">
+                <div *ngIf="csubmitted && e['email'].errors" class="invalid-feedback">
+                  <div *ngIf="e['email'].errors['required']">Email is required</div>
+                  <div *ngIf="e['email'].errors['email']">Email must be a valid email address</div>
+                </div>
+                <span class="isError" *ngIf="isEmailExists">Email already exists</span>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="name" class="form-label">Phone <span class="star-mark"> *</span></label>
+                <input type="text" maxlength="10" class="form-control" formControlName="phoneNumber"
+                  (input)="validateEmailPhone($event,1)" (keypress)="keyPress($event)"
+                  [ngClass]="{ 'is-invalid': csubmitted && e['phoneNumber'].errors || isPhoneExists }">
+                <div *ngIf="csubmitted && e['phoneNumber'].errors" class="invalid-feedback">
+                  <div *ngIf="e['phoneNumber'].errors['required']">Phone number is Required</div>
+                  <div *ngIf="e['phoneNumber'].errors['pattern']">Phone number must be in 10 digit number</div>
+                </div>
+                <span class="isError" *ngIf="isPhoneExists">Phone number already exists</span>
+              </div>
+              <div class="col-md-6">
+                <label for="name" class="form-label mb-1">Department <span class="star-mark">*</span></label>
+                <input type="text" class="form-control" formControlName="departmentName"
+                  [ngClass]="{ 'is-invalid': csubmitted && e['departmentName'].errors }">
+                <!-- <mat-select formControlName="departmentId" [(ngModel)]="selDepartment" placeholder="Select" [ngClass]="{ 'is-invalid': csubmitted && e['departmentId'].errors }">
+                  <mat-option *ngFor="let department of getDepartment.result" [value]="department.id">{{department.baseKeyValueName}}</mat-option>
+                </mat-select> -->
+                <div *ngIf="csubmitted && e['departmentName'].errors" class="invalid-feedback">
+                  <div *ngIf="e['departmentName'].errors['required']">Department is Required</div>
+                </div>
+                <!-- <select class="form-select" aria-label="Default select example" formControlName="departmentId">
+                  <option selected>Open this select menu</option>
+                  <option  *ngFor="let department of getDepartment.result" [value]="department.id" >{{ department.baseKeyValueName }}</option>
+                </select> -->
+                <!-- <input type="hidden" formControlName="programId" [(ngModel)]="selCustId" [ngClass]="{ 'is-invalid': csubmitted && e['programId'].errors }"> -->
+              </div>
+            </div>
+
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mt-2">
+              <button *ngIf="isUpdate" id="closeModal" class="clientAddBtn" type="submit"
+                (click)="UpdateContact()">Update</button>
+              <button *ngIf="!isUpdate" id="closeModal" class="clientAddBtn" type="submit" (click)="AddContact()"
+                [disabled]="isEmailExists || isPhoneExists">Add</button>
+              <button class="clientCancelBtn" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseClient">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div>
+        <h5 class="Contacts-txt mt-4">Contacts</h5>
+        <div class="col-12 responsivetbl p-0">
+          <table class="table" *ngIf="this.clientContacts.length > 0; else message">
+            <thead class="thead-bg">
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Department</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="table-matter" *ngFor="let contact of clientContacts">
+                <td>{{contact.personName}}</td>
+                <td>{{contact.email}}</td>
+                <td>{{contact.phoneNumber}}</td>
+                <td>{{contact.departmentName}}</td>
+                <td align="center"><span class="edit-pen"><i class='fas fa-pencil-alt' data-bs-toggle="collapse"
+                      data-bs-target="#collapseClient" (click)="viewData(contact.id)"></i></span>
+                  <span class="del-icon"><i class="fas fa-trash" (click)="onDeleteContact(contact.id)"></i></span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <ng-template #message>
+            <p class="d-flex justify-content-center align-items-center  mt-2">
+              No contacts added yet </p>
+          </ng-template>
+        </div>
+      </div>
+      <div class="bottom-btn">
+        <p class="filedmark-txt">Fields marked with <span class="star-mark"> * </span> are
+          mandatory</p>
+        <div class="text-end">
+          <button class="btn btn-cancel me-3" type="reset" (click)="onReset()"> Cancel</button>
+          <button class="btn btn-add" type="submit" [disabled]="buttonDisabled || isPoNumberExist || isClientCodeExists">Add</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

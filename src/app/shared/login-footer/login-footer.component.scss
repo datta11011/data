@@ -1,0 +1,39 @@
+ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    li{
+      margin-right: 1.5rem;
+      a{
+        text-decoration: none;
+        color: #505050;
+      }
+    }
+  }
+
+  .btm-mrgn{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+// line-height: 20px;
+color: #6D6D6D;
+  }
+  .ptg-grp{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+// line-height: 20px;
+text-align: center;
+color: #9A9A9A;
+  }
+
+  .container-fluid{
+   margin-top: 3rem;
+
+height: 230px;
+top: 700px;
+background: #F0F0F0;
+
+  }

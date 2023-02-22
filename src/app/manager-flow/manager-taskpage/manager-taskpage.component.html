@@ -1,0 +1,97 @@
+<div class="container">
+  <div class="row justify-con my-4">
+    <div class="col-md-2">
+      <label for="tasktypes" class="task-type mb-0">Task types</label>
+      <select ngModel class="form-select mt-1" (ngModelChange)="updateTaskType($event,serachTitle)"
+        [(ngModel)]='nrSelect'>
+        <option value="0">All</option>
+        <option *ngFor="let utype of getType?.result" [ngValue]="utype.id">{{utype.baseKeyValueName}}</option>
+      </select>
+    </div>
+    <div class="col-md-3 mt-auto">
+      <div class="searchbox">
+        <input type="search" class="form-control" placeholder="search" value="" (input)="getTaskList($event)">
+        <span class="search-icon"><i class="fa fa-search"></i></span>
+      </div>
+    </div>
+  </div>
+  <div class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" multiTemplateDataRows>
+
+      <!-- taskTitle Column -->
+      <ng-container matColumnDef="taskTitle">
+        <th class="header taskTitle-column" mat-header-cell *matHeaderCellDef><span>Task Title</span> </th>
+        <td mat-cell *matCellDef="let element">{{element.title}}</td>
+      </ng-container>
+
+      <!-- taskName Column -->
+      <ng-container matColumnDef="taskName">
+        <th class="header taskType-column" mat-header-cell *matHeaderCellDef> <span>Task Type</span> </th>
+        <td mat-cell *matCellDef="let element">{{element.typename}}</td>
+      </ng-container>
+
+      <!-- rating Column -->
+      <ng-container matColumnDef="rating">
+        <th class="header rating-column" mat-header-cell *matHeaderCellDef> <span>Task Rating</span> </th>
+        <td mat-cell *matCellDef="let element">{{element.rating}}</td>
+      </ng-container>
+
+      <!-- taskDuration Column -->
+      <ng-container matColumnDef="taskDuration">
+        <th class="header taskDuration-column" mat-header-cell *matHeaderCellDef> <span>Duration/ Task </span></th>
+        <td mat-cell *matCellDef="let element">{{element.taskDuration}}</td>
+      </ng-container>
+
+      <!-- taskCount Column -->
+      <ng-container matColumnDef="taskCount">
+        <th class="header taskCount-column" mat-header-cell *matHeaderCellDef><span>Task Count</span> </th>
+        <td mat-cell *matCellDef="let element">{{element.countOfTaskUploads}}</td>
+      </ng-container>
+
+      <!-- action Column -->
+      <ng-container matColumnDef="action">
+        <th class="header action-column" mat-header-cell *matHeaderCellDef> <span>Action</span> </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-icon-button [matMenuTriggerFor]="menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="InstDialog()">Instructions</button>
+          </mat-menu>
+          <span class="toggle-up collapsed" data-bs-toggle="collapse" (click)="showWorkflow(element.id, element)"
+            role="button">
+            <em class="fa fa-angle-down" *ngIf="expandedElement !== element"></em>
+            <em class="fa fa-angle-up" *ngIf="expandedElement === element"></em>
+          </span>
+        </td>
+      </ng-container>
+      <ng-container matColumnDef="expandedDetail">
+        <td mat-cell *matCellDef="let element" [attr.colspan]="displayedColumns.length">
+          <div style="display: block;" class="example-element-detail"
+            [@detailExpand]="element === expandedElement ? 'expanded' : 'collapsed'">
+            <ng-container *ngIf="element === expandedElement">
+              <span class="table-description">
+                <b> Description : </b>
+                {{element.description}}
+              </span>
+              <span>
+                <b>Created By :</b>
+                {{element.createdBy}}
+              </span>
+            </ng-container>
+          </div>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let element columns: displayedColumns;" class="example-element-row"
+        [class.example-expanded-row]="expandedElement === element">
+      </tr>
+      <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
+
+    </table>
+
+    <mat-paginator [pageSize]="pageData.pageSize" [length]="totalRecordCount" [pageIndex]="pageData.pageIndex"
+      [pageSizeOptions]="[10, 20, 30, 50, 100]" (page)="onPaginateChange($event,serachTitle)" showFirstLastButtons>
+    </mat-paginator>
+  </div>
+</div>

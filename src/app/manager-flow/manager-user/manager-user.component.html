@@ -1,0 +1,366 @@
+
+<div class="container-fluid px-5">
+  <div class="row mb-2 mt-5">
+    <div class="col-md-5 my-auto">
+      <h3 class="users-text mb-0">Users</h3>
+    </div>
+    <div class="col-md-7 font13">
+      <div class="d-flex f-right">
+        <span class="add-user-btn" (click)="usrDialog()"><img class="mx-1" src="../assets/images/add-user-icon.svg">Add User</span>
+        <div class="create-btns">
+          <div class="text-center mt-2">
+            <span class="categories-btn" data-bs-toggle="dropdown">Categories <i
+                class="fas fa-angle-down down-arrow"></i></span>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item">Active</a></li>
+              <li><a class="dropdown-item">Blocked</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-9">
+      <div class="amazon-tbl bg-white">
+        <table class="table mb-0">
+          <thead class="thead-bg">
+            <tr>
+              <th>Name</th>
+              <th>Role <span class="menu-icon" data-bs-toggle="dropdown"><i class="fas fa-bars"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item">Manager</a></li>
+                  <li><a class="dropdown-item">Data analyst</a></li>
+                  <li><a class="dropdown-item">QA</a></li>
+                  <li><a class="dropdown-item">SME</a></li>
+                  <li><a class="dropdown-item">Crowd</a></li>
+                  <li><a class="dropdown-item">Super admin</a></li>
+                </ul></th>
+              <th>Onboarded on</th>
+              <th>Email</th>
+              <th>Phone</th>
+              <th>Status</th>
+              <th></th>
+              <th></th>
+              <th></th>
+             </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{UserName}} <img src="../assets/images/person-icon.svg"></td>
+              <td>Manager</td>
+              <td>Dedc 04, 2021</td>
+              <td>david.bryan@peopletech.com</td>
+              <td>+91 1223456789</td>
+              <td><span class="badg bg-onboarded">Onboarded</span></td>
+              <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td></td>
+              <td><span class="blockbtn-1" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+            </tr>
+            <tr>
+              <td>Casper Ruth</td>
+              <td>Data Analyst</td>
+              <td>Dedc 04, 2021</td>
+              <td>casper.ruth@peopletech.com</td>
+              <td>+91 1223456789</td>
+              <td><span class="badg bg-onboarded-1">Invite sent</span></td>
+              <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td> <span class="blockbtn" type="button" > <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+            </tr>
+            <tr>
+                <td>Michael Korr</td>
+                <td>SME</td>
+                <td>Dedc 04, 2021</td>
+                <td>michael.korr@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded">Onboarded</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Casper Ruth</td>
+                <td>Data Analyst</td>
+                <td>Dedc 04, 2021</td>
+                <td>casper.ruth@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded-2">Invite accepted</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+                <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+                <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Michael Korr</td>
+                <td>Data Analyst</td>
+                <td>Dedc 04, 2021</td>
+                <td>michael.korr@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded">Onboarded</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+                <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+                <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Casper Ruth</td>
+                <td>Data Analyst</td>
+                <td>Dedc 04, 2021</td>
+                <td>casper.ruth@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded">Onboarded</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Michael Korr</td>
+                <td>SME</td>
+                <td>Dedc 04, 2021</td>
+                <td>casper.ruth@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded-1">Invite sent</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td > <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Annie Stewart</td>
+                <td>Super admin</td>
+                <td>Ded 04, 2021</td>
+                <td>annie.stewart@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded-2">Invite accepted</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+                <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+                <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Annie Stewart</td>
+                <td>Super admin</td>
+                <td>Ded 04, 2021</td>
+                <td>annie.stewart@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded-1">Invite sent</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Annie Stewart</td>
+                <td>Super admin</td>
+                <td>Ded 04, 2021</td>
+                <td>annie.stewart@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded-1">Invite sent</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+              <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+              <td> <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+              <tr>
+                <td>Annie Stewart</td>
+                <td>Super admin</td>
+                <td>Ded 04, 2021</td>
+                <td>annie.stewart@peopletech.com</td>
+                <td>+91 1223456789</td>
+                <td><span class="badg bg-onboarded">Onboarded</span></td>
+                <td><span class="eye-color"><i class="fa fa-eye"></i></span></td>
+                <td><span class="Assign-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"><img src="../assets/images/assign-icon.svg" width="14px"> Assign Task</span></td>
+                <td > <span class="blockbtn" type="button"> <span class="block-iconbg"><i class="fa fa-times" aria-hidden="true" width="14px"></i></span> Remove</span></td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="card box shadow  resp-space">
+        <div class="card-header pe-1">
+          <div class="d-flex">
+            <h6 class="User-count mb-0">User count</h6>
+            <div class="selectmonth">
+              <span class="align-self-center font13">Show:</span>
+              <select class="form-select font13">
+                <option>This month</option>
+                <option>August</option>
+                <option>July</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+          <div class="col-md-6"> <p class="my-2">Active</p></div>
+          <div class="col-md-6 my-auto text-end">15</div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-green" role="progressbar" aria-label="Success example" style="width: 80%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"> <p class="my-2">Idle</p></div>
+          <div class="col-md-6 my-auto text-end">3</div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-orange" role="progressbar" aria-label="Info example" style="width: 30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"> <p class="my-2">Blocked</p></div>
+          <div class="col-md-6 my-auto text-end">2</div>
+        </div>
+        <div class="progress">
+          <div class="progress-bar bg-red" role="progressbar" aria-label="Info example" style="width: 20%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+        <div class="row">
+          <div class="col-md-6"> <p class="my-2">Total</p></div>
+          <div class="col-md-6 my-auto text-end">20</div>
+        </div>
+       
+    </div>
+  </div>
+      <div class="my-3">
+        <div class="card box shadow  resp-space">
+          <div class="card-header pe-1">
+            <div class="d-flex">
+              <h6 class="User-onboarded mb-0">Onboarded</h6>
+              <div class="selectmonth">
+                <span class="align-self-center font13">Show:</span>
+                <select class="form-select font13">
+                  <option>This month</option>
+                  <option>August</option>
+                  <option>July</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="card-body my-3">
+            <div class="row">
+              <div class="col-md-7">
+                <div class="internal-pad">
+                  <span class="font25">20</span>
+                 </div>
+              </div>
+              <div class="col-md-5 status-color">
+                <ul class="clr-list">
+                  <li class="side-text"><img src="../assets/images/Ellipse 1.png"> Data analyst</li>
+                  <li class="side-text"><img src="../assets/images/Ellipse 2.png"> SME</li>
+                  <li class="side-text"><img src="../assets/images/Ellipse 3.png"> QA</li>
+                  <li class="side-text"><img src="../assets/images/Ellipse 4.png"> Blocked</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+<!-- <app-footer></app-footer> -->
+</div>
+
+
+<div class="offcanvas offcanvas-end" id="demo">
+  <div class="offcanvas-header">
+    <h1 class="offcanvas-title">Assign Task</h1>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p class="task-1">Assign task for </p>
+    <p class="casper-text">Casper Ruth</p>
+    <p class="general-text">General</p>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Image classification
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Data collection (Image)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Data collection (Speech)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Face detection
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Lane alignment (Polyline)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Vehicle identification (Bounding box)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Human identification (Polygon)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Cafe/restaurant identification (Bounding box)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Object identification (Mixed)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Object identification (Lidar)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Street sign annotation (Bounding box)
+        <input type="checkbox"checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Danger sign identification (Mixed)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Lane identification (Polyline)
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <p class="specific-text mt-3">Specific</p>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Is the answer correct
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-check ">
+      <label class="checkcontainer text-checkbox"> Classify advertisers keyword relevance for pictures and ob...
+        <input type="checkbox" checked="checked">
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="text-end">
+      <button class="assign-task-btn btn">Assign</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="text-end mb-2">
+    <span class="cross-icon" (click)="onNoClick()"><i class="fas fa-times-circle"></i></span>
+  </div>
+  <div class="mb-4">
+    <h4 class="add-client mb-0">Manage Client</h4>
+  </div>
+  <p class="clientName-txt mb-0">Client Name</p>
+  <p class="amazon">{{customerName}}</p>
+  <p class="workflow-text">Workflows</p>
+  <table class="table">
+    <thead class="thead-bg">
+      <tr>
+        <th>Workflow ID</th>
+        <th>PO Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let wf of programsByClient">
+        <td>
+          <mat-slide-toggle [checked]="wf.statusId" (change)="onClick($event, wf)"
+              color="primary">{{ wf.id }}</mat-slide-toggle> 
+          <!-- <mat-slide-toggle color="primary">{{wf.id}}</mat-slide-toggle> -->
+          <!-- <input class="form-check-input" type="checkbox" checked> -->
+          <!-- <span class="form-check-label" for="flexSwitchCheckChecked">{{wf.id}}</span> -->
+        </td>
+        <td>{{wf.ponumber}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <p>Contacts</p>
+
+
+  <div class="col-12 responsivetbl p-0">
+    <table class="table">
+      <thead class="thead-bg">
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Department</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of clientcontacts">
+          <td>
+            <mat-slide-toggle (change)="onChange1($event, contact)" [checked]="contact.statusId"
+              color="primary">{{contact.personName}}</mat-slide-toggle>
+            <!-- <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+              <label class="form-check-label" for="flexSwitchCheckChecked">{{contact.personName}}</label> -->
+          </td>
+          <td>{{contact.email}}</td>
+          <td>{{contact.phoneNumber}}</td>
+          <td>{{contact.departmentName}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

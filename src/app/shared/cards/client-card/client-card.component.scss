@@ -1,0 +1,272 @@
+.scrollbar {
+  height: 60px;
+  overflow-y: scroll;
+  width: 112%;
+  margin-left: -24px;
+}
+ ::-webkit-scrollbar{
+  background-color: rgb(218, 216, 216);
+  border-radius: 50px;
+  width: 5px;
+  height: 5px;
+ }
+
+ ::-webkit-scrollbar-thumb{
+  background-color: rgb(109, 108, 108);
+  border-radius: 10px;
+ }
+
+.numberCount {
+  font-size: 41px;
+  background-color: #DDF0DF;
+  padding: 10px 13px;
+  border-radius: 50%;
+  font-family: "'Inter', sans-serif";
+  /* font-style: normal; */
+  font-weight: 500;
+  color: #0F0F0F;
+}
+
+.numberCount-1 {
+  font-size: 41px;
+  background-color: #F9D7BF;
+  padding: 10px 13px;
+  border-radius: 50%;
+  font-family: "'Inter', sans-serif";
+  /* font-style: normal; */
+  font-weight: 500;
+  color: #0F0F0F;
+}
+
+.workflow-btn {
+  color: #A72037;
+  border: 0.1rem solid #A72037;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  width: 178px;
+  height: 33px
+}
+
+.Manageworkflow-btn {
+  color: #448087;
+  border: 0.1rem solid #448087;
+  border-radius: 20px;
+  font-size: 12px;
+  padding: 5px;
+  font-weight: bold;
+  width: 178px;
+}
+
+.down-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6D6D6D;
+}
+
+.numberCircle {
+  font-size: 14px;
+  font-weight: 400;
+  background: #064377;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 100%;
+}
+
+
+.numberCircle1 {
+  font-size: 14px;
+  font-weight: 400;
+  background: green;
+  width: 24px;
+  height: 24px;
+  color: #FFFFFF;
+  text-align: center;
+  border-radius: 100%;
+}
+
+.flex-row {
+  display: flex;
+}
+
+.clientwidth {
+  width: 115PX;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  text-align: start;
+}
+
+.wfwidth {
+  width: 75px;
+}
+
+// .background-number {
+//   font-size: 17px;
+//  font-weight: 400;
+//   background-color: #064377;
+//   padding: 10px 10px;
+//   color: white;
+//   border-radius: 100%;
+// }
+
+// .background-number-1 {
+//   font-size: 16px;
+//   font-weight: 400;
+//   background-color: #16601A;
+//   padding: 5px 10px;
+//   color: white;
+//   border-radius: 50px;
+// }
+
+// .background-number-2 {
+//   font-size: 17px;
+//   font-weight: 400;
+//   background-color: #16601A;
+//   padding: 5px 10px;
+//   color: white;
+//   border-radius: 100%;
+// }
+
+// .background-number-3 {
+//   font-size: 17px;
+//   font-weight: 400;
+//   background-color: #16601A;
+//   padding: 5px 7px;
+//   color: white;
+//   border-radius: 100%;
+// }
+
+// .card{
+
+//   box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+//   border-radius: 4px;
+// }
+// .show {
+//   text-align: right;
+//   margin-top: -32px;
+//   color: #6A707E;
+//   float: right;
+// }
+
+// .month {
+//   color: skyblue;
+// }
+
+// .font25 {
+//   font-size: 25px;
+// }
+
+// .active {
+//   margin-bottom: 0;
+//   font-size: 12px;
+//   line-height: 16px;
+// }
+
+.card-header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+// .clr-list {
+//   padding: 0;
+//   margin: 0;
+//   list-style: none;
+//   font-size: 12px;
+// }
+
+.selectmonth {
+  padding: 0;
+  min-width: 0px;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+
+  .form-select {
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .font13 {
+    font-size: 12px;
+    font-weight: 400;
+  }
+}
+
+// .internal-pad {
+//   font-size: 25px;
+//   width: 105px;
+//   border-radius: 100px;
+// }
+
+.Client-Workflows {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+// .google-text1{
+//   font-family: 'Inter', sans-serif;
+// font-style: normal;
+// font-weight: 400;
+// font-size: 14px;
+// line-height: 20px;
+// color: #0F0F0F;
+// }
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  padding: 8px 32px 8px 16px;
+}
+
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}
+
+.goole-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  color: #0F0F0F;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.ellipsesis {
+  max-width: 70px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

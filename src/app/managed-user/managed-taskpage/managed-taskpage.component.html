@@ -1,0 +1,659 @@
+
+<div class="container">
+  <h2 class="amazon-text mt-5">{{clientDetails.result?.customerName}}</h2>
+  <ul class="nav mt-4">
+    <li class="nav-item ">
+      <a class="nav-link all-text">All</a>
+    </li>
+    <li class="nav-item mx-4">
+      <a class="nav-link ">Active</a>
+    </li>
+    <li class="nav-item mx-4">
+     <a class="nav-link ">Favourites</a>
+    </li>
+    <li class="nav-item mx-4">
+      <a class="nav-link">Resolved</a>
+    </li>
+  </ul>
+          <div class="icon-dropdown">
+             <span class="menu-icon" data-bs-toggle="dropdown"><i class="fas fa-filter"></i></span>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item mx-2 "><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Medical AI</a></li>
+                  <li><a class="dropdown-item  mx-2"><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Autonomous vehicle AI</a></li>
+                  <li><a class="dropdown-item  mx-2"><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Sports annotation</a></li>
+                  <li><a class="dropdown-item  mx-2"><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Face detection</a></li>
+                  <li><a class="dropdown-item  mx-2"><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Text annotation</a></li>
+                  <li><a class="dropdown-item  mx-2"><input class="form-check-input" type="checkbox" id="check1" name="option1" value="something" checked> Speech translation</a></li>
+                </ul>
+            </div>
+         
+  <div class="row mt-4">
+    <div class="col-md-4" *ngFor="let ctask of dataSource; let i = index">
+      <div class="card amazon-card">
+        <div class="card-header">
+          <div class="d-flex">
+            <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">{{ctask.title}}
+            </h5>
+            <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                class="rating mx-1">Rating :</span><span class="rating-value">{{ctask.rating}}</span> </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+                <div class="line-ul">
+                    <ul>
+                      <li>Type</li>
+                      <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                     
+                    </ul>
+                    <ul>
+                      <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                      <li>Autonomous vehicle</li>
+                    </ul>
+                    <ul>
+                      <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                      <li>{{ctask.taskDuration}} per task</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3 my-auto">
+              <div>
+                <ul class="taskul">
+                  <li class="align-self-center">Task</li>
+                  <li class="taskbg">10</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-md-10">
+              <div>
+                <div class="collapse" id="collapseExample-1">
+                  <div class="card-body">
+                    <p class="cust-p">
+                    {{ctask.description}}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 my-auto">
+              <a (click)="toggleup()" *ngIf="up" class="toggle-down"  data-bs-toggle="collapse" href="#List-{{ i }}" role="button"
+              aria-expanded="false" aria-controls="i" ><i class="fa fa-angle-down"></i></a>
+              <a (click)="toggledown()" *ngIf="show" class="toggle-up"data-bs-toggle="collapse" href="#List-{{ i }}" role="button"
+                aria-expanded="false" aria-controls="i"><i class="fa fa-angle-up"></i></a>
+            </div>
+          </div>
+          <div class="text-end">
+            <ul>
+              <i class="far fa-heart"></i>
+              <button class="skip-btn mt-2">Skip task</button>
+            </ul>
+          </div>
+          <div class="d-flex cardbtns">
+            <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+            <button type="button" class="btn start-btn" routerLink="/managed-uploadtask" >Start Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-4">
+      <div class="card amazon-card">
+        <div class="card-header">
+          <div class="d-flex">
+            <h5 class="Lane-alignment mb-0 max-length" title="Speech collection (Audio)">Vehicle identification (Bounding box)
+            </h5>
+            <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                src="../../../assets/images/price-tag-icon.svg"><span class="exam-label">EXAM</span> <span
+                class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+                <div class="line-ul">
+                    <ul>
+                      <li>Type</li>
+                      <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                     
+                    </ul>
+                    <ul>
+                      <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                      <li>Autonomous vehicle</li>
+                    </ul>
+                    <ul>
+                      <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                      <li>2-3m per task</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3 my-auto">
+              <div>
+                <ul class="taskul">
+                  <li class="align-self-center">Task</li>
+                  <li class="taskbg">20</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-md-10">
+              <div>
+                <div class="collapse" id="collapseExample-2">
+                  <div class="card-body">
+                    <p class="cust-p">
+                      In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                    broken, edge of the road etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 my-auto">
+              <span class="toggle-up" data-bs-toggle="collapse" href="#collapseExample-2" role="button"  aria-expanded="false" aria-controls="collapseExample-2"><i class="fa fa-angle-down"></i></span>
+            </div>
+          </div>
+          <div class="text-end">
+            <ul>
+              <i class="far fa-heart"></i>
+              <button class="skip-btn mt-2">Skip task</button>
+            </ul>
+          </div>
+          <div class="d-flex cardbtns">
+            <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+            <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card amazon-card">
+        <div class="card-header">
+          <div class="d-flex">
+            <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Human identification (Polygon)
+            </h5>
+            <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                src="../../../assets/images/price-tag-icon.svg"><span class="exam-label">EXAM</span> <span
+                class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+                <div class="line-ul">
+                    <ul>
+                      <li>Type</li>
+                      <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                     
+                    </ul>
+                    <ul>
+                      <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                      <li>Autonomous vehicle</li>
+                    </ul>
+                    <ul>
+                      <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                      <li>2-3m per task</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3 my-auto">
+              <div>
+                <ul class="taskul">
+                  <li class="align-self-center">Task</li>
+                  <li class="taskbg">20</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-md-10">
+              <div>
+                <div class="collapse" id="collapseExample-3">
+                  <div class="card-body">
+                    <p class="cust-p">
+                      In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                    broken, edge of the road etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 my-auto">
+              <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-3" role="button"  aria-expanded="false" aria-controls="collapseExample-3"><i class="fa fa-angle-down"></i></span>
+            </div>
+          </div>
+          <div class="text-end">
+            <ul>
+              <i class="far fa-heart"></i>
+              <button class="skip-btn mt-2">Skip task</button>
+            </ul>
+          </div>
+          <div class="d-flex cardbtns">
+            <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+            <button type="button" class="btn start-btn" routerLink="/managed-uploadtask" >Start Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card amazon-card">
+        <div class="card-header">
+          <div class="d-flex">
+            <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Cafe/Restaurant  identification(Bounding box)
+            </h5>
+            <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+                <div class="line-ul">
+                    <ul>
+                      <li>Type</li>
+                      <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                     
+                    </ul>
+                    <ul>
+                      <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                      <li>Autonomous vehicle</li>
+                    </ul>
+                    <ul>
+                      <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                      <li>2-3m per task</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3 my-auto">
+              <div>
+                <ul class="taskul">
+                  <li class="align-self-center">Task</li>
+                  <li class="taskbg">20</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-md-10">
+              <div>
+                <div class="collapse" id="collapseExample-4">
+                  <div class="card-body">
+                    <p class="cust-p">
+                      In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                    broken, edge of the road etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 my-auto">
+              <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-4" role="button"  aria-expanded="false" aria-controls="collapseExample-4"><i class="fa fa-angle-down"></i></span>
+            </div>
+          </div>
+          <div class="text-end">
+            <ul>
+              <i class="far fa-heart"></i>
+              <button class="skip-btn mt-2">Skip task</button>
+            </ul>
+          </div>
+          <div class="d-flex cardbtns">
+            <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+            <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card amazon-card">
+            <div class="card-header">
+              <div class="d-flex">
+                <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Object Identification (Mixed)
+                </h5>
+                <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                    src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                    class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9">
+                    <div class="line-ul">
+                        <ul>
+                          <li>Type</li>
+                          <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                         
+                        </ul>
+                        <ul>
+                          <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                          <li>Autonomous vehicle</li>
+                        </ul>
+                        <ul>
+                          <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                          <li>2-3m per task</li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3 my-auto">
+                  <div>
+                    <ul class="taskul">
+                      <li class="align-self-center">Task</li>
+                      <li class="taskbg">10</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-10">
+                  <div>
+                    <div class="collapse" id="collapseExample-5">
+                      <div class="card-body">
+                        <p class="cust-p">
+                          In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                        broken, edge of the road etc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 my-auto">
+                  <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-5" role="button"  aria-expanded="false" aria-controls="collapseExample-5"><i class="fa fa-angle-down"></i></span>
+                </div>
+              </div>
+              <div class="text-end">
+                <ul>
+                  <i class="far fa-heart"></i>
+                  <button class="skip-btn mt-2">Skip task</button>
+                </ul>
+              </div>
+              <div class="d-flex cardbtns">
+                <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+                <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card amazon-card">
+            <div class="card-header">
+              <div class="d-flex">
+                <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Object Identification (Lidar)
+                </h5>
+                <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                    src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                    class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9">
+                    <div class="line-ul">
+                        <ul>
+                          <li>Type</li>
+                          <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                         
+                        </ul>
+                        <ul>
+                          <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                          <li>Autonomous vehicle</li>
+                        </ul>
+                        <ul>
+                          <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                          <li>2-3m per task</li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3 my-auto">
+                  <div>
+                    <ul class="taskul">
+                      <li class="align-self-center">Task</li>
+                      <li class="taskbg">5</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-10">
+                  <div>
+                    <div class="collapse" id="collapseExample-6">
+                      <div class="card-body">
+                        <p class="cust-p">
+                          In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                        broken, edge of the road etc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 my-auto">
+                  <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-6" role="button"  aria-expanded="false" aria-controls="collapseExample-6"><i class="fa fa-angle-down"></i></span>
+                </div>
+              </div>
+              <div class="text-end">
+                <ul>
+                  <i class="far fa-heart"></i>
+                  <button class="skip-btn mt-2">Skip task</button>
+                </ul>
+              </div>
+              <div class="d-flex cardbtns">
+                <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+                <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card amazon-card">
+            <div class="card-header">
+              <div class="d-flex">
+                <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Street sign annotation (Bounding box)
+                </h5>
+                <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                    src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                    class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9">
+                    <div class="line-ul">
+                        <ul>
+                          <li>Type</li>
+                          <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                         
+                        </ul>
+                        <ul>
+                          <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                          <li>Autonomous vehicle</li>
+                        </ul>
+                        <ul>
+                          <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                          <li>2-3m per task</li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3 my-auto">
+                  <div>
+                    <ul class="taskul">
+                      <li class="align-self-center">Task</li>
+                      <li class="taskbg">20</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-10">
+                  <div>
+                    <div class="collapse" id="collapseExample-7">
+                      <div class="card-body">
+                        <p class="cust-p">
+                          In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                        broken, edge of the road etc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 my-auto">
+                  <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-7" role="button"  aria-expanded="false" aria-controls="collapseExample-7"><i class="fa fa-angle-down"></i></span>
+                </div>
+              </div>
+              <div class="text-end">
+                <ul>
+                  <i class="far fa-heart"></i>
+                  <button class="skip-btn mt-2">Skip task</button>
+                </ul>
+              </div>
+              <div class="d-flex cardbtns">
+                <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+                <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card amazon-card">
+            <div class="card-header">
+              <div class="d-flex">
+                <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Danger sign identification (Mixed)
+                </h5>
+                <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                    src="../../../assets/images/price-tag-icon.svg"><span class="exam-label">EXAM</span> <span
+                    class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-9">
+                    <div class="line-ul">
+                        <ul>
+                          <li>Type</li>
+                          <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                         
+                        </ul>
+                        <ul>
+                          <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                          <li>Autonomous vehicle</li>
+                        </ul>
+                        <ul>
+                          <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                          <li>2-3m per task</li>
+                        </ul>
+                      </div>
+                </div>
+                <div class="col-md-3 my-auto">
+                  <div>
+                    <ul class="taskul">
+                      <li class="align-self-center">Task</li>
+                      <li class="taskbg">20</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="row mt-1">
+                <div class="col-md-10">
+                  <div>
+                    <div class="collapse" id="collapseExample-8">
+                      <div class="card-body">
+                        <p class="cust-p">
+                          In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                        broken, edge of the road etc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-2 my-auto">
+                  <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-8" role="button"  aria-expanded="false" aria-controls="collapseExample-8"><i class="fa fa-angle-down"></i></span>
+                </div>
+              </div>
+              <div class="text-end">
+                <ul>
+                  <i class="far fa-heart"></i>
+                  <button class="skip-btn mt-2">Skip task</button>
+                </ul>
+              </div>
+              <div class="d-flex cardbtns">
+                <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+                <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+              </div>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+ <div class="card amazon-card">
+        <div class="card-header">
+          <div class="d-flex">
+            <h5 class="Lane-alignment mb-0 max-length" title="Lane alignment (Polyline)">Lane Identification (Polyline)
+            </h5>
+            <div class="ms-auto my-auto d-flex"><img class="pricetag-icon"
+                src="../../../assets/images/price-tag-icon.svg"><span class="exam-label"> EXAM</span> <span
+                class="rating mx-1">Rating :</span><span class="rating-value"> 4</span> </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-9">
+                <div class="line-ul">
+                    <ul>
+                      <li>Type</li>
+                      <li class="gallery-icon"><img src="../../../assets/images/Polyline-1.svg"></li>
+                     
+                    </ul>
+                    <ul>
+                      <li class="car"><img src="../../../assets/images/car-icon.svg"></li>
+                      <li>Autonomous vehicle</li>
+                    </ul>
+                    <ul>
+                      <li class="clock"><img src="../../../assets/images/clock-icon.svg"></li>
+                      <li>2-3m per task</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="col-md-3 my-auto">
+              <div>
+                <ul class="taskul">
+                  <li class="align-self-center">Task</li>
+                  <li class="taskbg">20</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-1">
+            <div class="col-md-10">
+              <div>
+                <div class="collapse" id="collapseExample-9">
+                  <div class="card-body">
+                    <p class="cust-p">
+                      In this project user needs to identify and label lanes on a road which are single lane, double lane,
+                    broken, edge of the road etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 my-auto">
+              <span class="toggle-up"  data-bs-toggle="collapse" href="#collapseExample-9" role="button"  aria-expanded="false" aria-controls="collapseExample-9"><i class="fa fa-angle-down"></i></span>
+            </div>
+          </div>
+            <div class="text-end">
+              <ul>
+                <i class="far fa-heart"></i>
+                <button class="skip-btn mt-2">Skip task</button>
+              </ul>
+            </div>
+          <div class="d-flex cardbtns">
+            <button type="button" class="btn instruction-btn" (click)="InstDialog()">Instructions</button>
+            <button type="button" class="btn start-btn" routerLink="/managed-uploadtask">Start Task</button>
+          </div>
+        </div>
+      </div> -->
+    <!-- </div> -->
+  </div>
+</div>
+
+<div class="footer">
+<!-- <app-footer></app-footer> -->
+</div>

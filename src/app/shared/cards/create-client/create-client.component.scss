@@ -1,0 +1,289 @@
+.AddContact-btn {
+  border: 1px solid #448087;
+  color: #448087;
+  border-radius: 20px;
+  background: transparent;
+  padding: 0.3rem 1.2rem;
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  &:disabled {
+    background: #eee;
+    border-color: #aaa;
+    color: #aaa;
+    cursor: not-allowed;
+  }
+  img {
+    margin-right: 5px;
+    height: 10px;
+  }
+}
+
+.addclient-txt {
+  font-size: 24px;
+}
+
+.star-mark {
+  color: red;
+  font-size: 15px;
+}
+
+.add-contact {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #6d6d6d;
+}
+
+label {
+  color: #6d6d6d;
+  font-size: 16px;
+}
+
+.clientBodyBg {
+  background-color: #f0f0f0;
+}
+
+.cancel-save-container {
+  float: right;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.Contacts-txt {
+  font-size: 16px;
+  font-weight: bold;
+  color: #6d6d6d;
+}
+
+.notadded {
+  font-size: 16px;
+  color: #9a9a9a;
+}
+
+.filedmark-txt {
+  font-size: 14px;
+  color: #6d6d6d;
+}
+
+.card-header {
+  background-color: #fff;
+}
+
+.btn-cancel {
+  background-color: #fff;
+  color: #a72037;
+  padding: 4px 40px;
+  border-radius: 25px;
+  border: 0.1rem solid #a72037;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn-add {
+  border-radius: 20px;
+  border: 1px solid #a72037;
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #a72037;
+  font-size: 14px;
+  padding: 4px 50px;
+  color: #fff;
+}
+
+.responsivetbl {
+  max-width: 100%;
+  overflow: auto;
+}
+
+th {
+  border-bottom: 2px solid transparent !important;
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.thead-bg {
+  background-color: #f0f0f0;
+  font-family: "'Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.edit-pen {
+  margin-right: 0;
+  cursor: pointer;
+
+  i {
+    font-size: 15px;
+    color: #448087;
+  }
+}
+
+.del-icon {
+  cursor: pointer;
+  margin-left: 1rem;
+
+  i {
+    font-size: 15px;
+    color: #448087;
+  }
+}
+
+.select-width {
+  width: 400px;
+  padding: 0.5rem 1rem;
+}
+
+.add-client {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+// .form-control {
+//   font-family: 'Inter', sans-serif;
+//   font-style: normal;
+//   font-weight: bold;
+//   font-size: 16px;
+//   line-height: 20px;
+//   display: flex;
+//   align-items: center;
+//   color: #424242;
+// }
+
+.dropdown-item {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+}
+
+.form-select {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #424242;
+}
+
+.clientAddBtn {
+  color: #fff;
+  background-color: #a72037;
+  border-radius: 45px;
+  border: 1px solid #a72037;
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  height: 35px;
+  width: 96px;
+}
+
+.clientCancelBtn {
+  background-color: #fff;
+  color: #a72037;
+  border-radius: 25px;
+  border: 0.1rem solid #a72037;
+  font-size: 12px;
+  font-weight: bold;
+  height: 35px;
+  width: 96px;
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+}
+
+.Contacts-txt {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  align-items: center;
+  color: #6d6d6d;
+}
+
+.table-matter {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 50px;
+  color: #212121;
+}
+
+.close {
+  background-color: #575656;
+  color: white;
+  border-radius: 27px;
+  padding: 6px;
+  width: 24px;
+  font-size: 11px;
+}
+
+.form-label {
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #6d6d6d;
+}
+
+.cross-icon {
+  width: 24px;
+  height: 24px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.bottom-btn {
+  position: relative;
+  margin-top: 81%;
+}
+
+// ::ng-deep .mat-select-panel { margin-top: 42px !important; }
+
+.mat-form-field {
+  width: 100%;
+}
+
+::ng-deep .mat-form-field-appearance-fill .mat-form-field-flex {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0px !important;
+  padding: 0em 0.5em !important;
+}
+
+::ng-deep .mat-form-field-infix {
+  padding: 0.2em 0 !important;
+  border-top: none;
+}
+
+.mat-select-value {
+  margin-top: -20px;
+}
+
+.danger-feedback {
+  font-size: 0.875em;
+  color: #dc3545;
+}
+
+.isError{
+  color : #dc3545;
+  font-size: .875em;
+}

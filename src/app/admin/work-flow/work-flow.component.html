@@ -1,0 +1,225 @@
+<!-- <p>work-flow works!</p> -->
+<div class="banner-color">
+    <div class="contanier-fluid p-5">
+        <div class="container">
+            <p class="text"><b>Dashboard</b></p>
+            <div class="row">
+                <div class="col-md-6">
+                    <strong><h1>Client and Workflows</h1></strong>
+                </div>
+                <div class="col-md-3">
+                        <button type="button" class="workflow-btn btn" data-bs-toggle=""
+                        data-bs-target="#exampleModal"><img src="../assets/images/workflow.png" width="15px"> Create an workflow</button>
+                </div>
+                <div class="col-md-3">
+                    <div class="searchBar">
+                        <input id="searchQueryInput" type="text" name="searchQueryInput" placeholder="Search" value="" >
+                        <button id="searchQuerySubmit" type="submit" name="searchQuerySubmit">
+                          <svg style="width:24px;height:24px" viewBox="0 0 25 25"><path fill="#666666" d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" />
+                          </svg>
+                        </button>
+                      </div>
+                        <!-- <form id="search-form" class="form-inline">
+                            <input type="text" class="form-control search-form" placeholder="Search">
+                            <span class="input-group-btn"><button type="submit" class="btn btn-secondary search-btn">
+                                <i class="fa fa-search"></i></button></span>
+                        </form> -->
+                    <!-- <div class="search-btn">
+                        <input type="text" placeholder="Search..." class="form-control" id="search" name="search">
+                    </div> -->
+                </div>
+
+                <!-- table -->
+                <div class="container">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                                <!-- <div class="panel-heading">
+                                    Employee
+                                </div> -->
+             <div class="panel-body">
+                <table class="table table-condensed table-striped">
+                    <thead>
+                        <tr>
+                          <th>Client</th>
+                          <th>Total programs</th>
+                          <th>Crowd</th>
+                          <th>Managed</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
+                           <td>Amazon</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><img src="https://img.icons8.com/tiny-glyph/16/experimental-menu-2-tiny-glyph.png"/></td>
+                            <td><img src="https://img.icons8.com/ios/20/down-squared--v1.png"/></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="12" class="hiddenRow">
+                                            <div class="accordian-body collapse" id="demo1">
+                              <table class="table table-striped">
+                                      <thead>
+                                        <tr class="">
+                                            <th>Program name</th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                      </thead>
+
+                                <tbody>
+                                        <!-- <tr data-toggle="collapse"  class="accordion-toggle" data-target="#demo10">
+                                            <td> <a href="#">Enginner Software</a></td>
+                                            <td>Google</td>
+                                            <td>U$8.00000 </td>
+                                            <td> 2016/09/27</td>
+                                            <td> 2017/09/27</td>
+                                            <td> <a href="#" class="btn btn-default btn-sm">
+                                                 <i class="glyphicon glyphicon-cog"></i></a>
+                                            </td>
+                                        </tr> -->
+
+                            <!-- <tr>
+                            <td colspan="12" class="hiddenRow">
+                                            <div class="accordian-body collapse" id="demo10">
+                              <table class="table table-striped">
+                                      <thead>
+                                        <tr>
+                                            <td><a href="#"> XPTO 1</a></td>
+                                                     <td>XPTO 2</td>
+                                                    <td>Obs</td>
+                                        </tr>
+                                        <tr>
+                                            <th>item 1</th>
+                                            <th>item 2</th>
+                                            <th>item 3 </th>
+                                            <th>item 4</th>
+                                            <th>item 5</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                            <td>item 1</td>
+                                            <td>item 2</td>
+                                            <td>item 3</td>
+                                            <td>item 4</td>
+                                            <td>item 5</td>
+                                            <td><a href="#" class="btn btn-default btn-sm">
+                                                <i class="glyphicon glyphicon-cog"></i></a>
+                                            </td>
+                                        </tr>
+                                      </tbody>
+                                   </table>
+
+                              </div>
+                          </td>
+                        </tr> -->
+
+                                        <tr>
+                                            <td>Product classification</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/fluency-systems-filled/15/edit.png"/>Edit</button></td>
+                                            <td><button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/material-rounded/15/delete-sign.png"/>Remove</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Lane detection</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/fluency-systems-filled/15/edit.png"/>Edit</button></td>
+                                            <td> <button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/material-rounded/15/delete-sign.png"/>Remove</button></td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>Road identification</td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td><button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/fluency-systems-filled/15/edit.png"/>Edit</button></td>
+                                            <td><button type="button" class="flow-btn btn"
+                                                data-bs-target="#exampleModal"><img src="https://img.icons8.com/material-rounded/15/delete-sign.png"/>Remove</button></td>
+                                        </tr>
+
+                                      </tbody>
+                                   </table>
+
+                              </div>
+                          </td>
+                        </tr>
+
+                        <tr data-toggle="collapse" data-target="#demo2" class="accordion-toggle">
+                            <td>Google</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><img src="https://img.icons8.com/tiny-glyph/16/experimental-menu-2-tiny-glyph.png"/></td>
+                            <td><img src="https://img.icons8.com/ios/20/down-squared--v1.png"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="hiddenRow">
+                                <div id="demo2" class="accordian-body collapse text-center">
+                                    Currently there are no task programs added
+                                </div></td>
+                        </tr>
+
+                        <tr data-toggle="collapse" data-target="#demo3" class="accordion-toggle">
+                            <td>Microsoft</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><img src="https://img.icons8.com/tiny-glyph/16/experimental-menu-2-tiny-glyph.png"/></td>
+                            <td><img src="https://img.icons8.com/ios/20/down-squared--v1.png"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="hiddenRow">
+                                <div id="demo3" class="accordian-body collapse text-center">
+                                    Currently there are no task programs added
+                                </div></td>
+                        </tr>
+
+                        <tr data-toggle="collapse" data-target="#demo4" class="accordion-toggle">
+                            <td>Apple</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td>0</td>
+                            <td><img src="https://img.icons8.com/tiny-glyph/16/experimental-menu-2-tiny-glyph.png"/></td>
+                            <td><img src="https://img.icons8.com/ios/20/down-squared--v1.png"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="6" class="hiddenRow">
+                                <div id="demo4" class="accordian-body collapse text-center">
+                                    Currently there are no task programs added
+                                </div></td>
+                        </tr>
+                    </tbody>
+                </table>
+                            </div>
+
+                          </div>
+
+                      </div>
+                    </div>
+
+
+                <!--  -->
+            </div>
+        </div>
+    </div>
+</div>
+

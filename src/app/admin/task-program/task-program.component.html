@@ -1,0 +1,194 @@
+<div class="conatiner mt-2">
+  <div class="text-end mb-2">
+    <span class="cross-icon" (click)="onNoClick()"><i class="fas fa-times-circle"></i></span>
+  </div>
+  <h5 class="addclient-txt mb-3">{{this.data.edit ? 'Edit Task Program' : 'Create a Task Program'}}</h5>
+  <form [formGroup]="taskForm" (submit)="onSubmit(taskForm)">
+
+    <div class="form-group mb-3">
+      <label for="task-id" class="form-label">Task ID</label>
+      <input type="text" class="form-control bginput-grey" matInput formControlName="id" readonly="readonly">
+    </div>
+    <div class="form-group mb-3">
+      <label for="task-id" class="form-label">Task Title<span class="star-mark"> *</span></label>
+      <input type="text" class="form-control" formControlName="title"
+        [ngClass]="{ 'is-invalid': submitted && f.title.errors }">
+      <div *ngIf="submitted && f.title.errors" class="invalid-feedback">
+        <div *ngIf="f.title.errors.required">Title is required</div>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="Textarea1">Task Description <span class="star-mark"> *</span></label>
+      <textarea class="form-control" formControlName="description"
+        [ngClass]="{ 'is-invalid': submitted && f.description.errors }"></textarea>
+      <div *ngIf="submitted && f.description.errors" class="invalid-feedback">
+        <div *ngIf="f.description.errors.required">Task Description is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="country" class="mb-1">Category <span class="star-mark">*</span></label>
+      <mat-select formControlName="category" placeholder="select" [(ngModel)]="selCat"
+        [ngClass]="{ 'is-invalid': submitted && f.category.errors }">
+        <mat-option>select</mat-option>
+        <mat-option *ngFor="let cat of getDropdown?.result" [value]="cat.id">{{ cat.baseKeyValueName }}
+        </mat-option>
+      </mat-select>
+      <div *ngIf="submitted && f.category.errors" class="invalid-feedback">
+        <div *ngIf="f.category.errors.required">Catergory is required</div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label for="country" class="mb-1">Type <span class="star-mark">*</span></label>
+      <mat-select formControlName="taskType" placeholder="select" [(ngModel)]="selType"
+        [ngClass]="{ 'is-invalid': submitted && f.taskType.errors }">
+        <mat-option>Select</mat-option>
+        <mat-option *ngFor="let utype of getDepartment?.result" [value]="utype.id">{{
+          utype.baseKeyValueName }}</mat-option>
+      </mat-select>
+      <div *ngIf="submitted && f.taskType.errors" class="invalid-feedback">
+        <div *ngIf="f.taskType.errors.required">Type is required</div>
+      </div>
+    </div>
+
+    <div class="mb-3" *ngIf="selCat == 42 && selType == 13">
+      <p class="mb-2 paragraph-color">Define Tool Type<span class="star-mark"> *</span></p>
+
+      <span class="form-check" *ngFor="let ttype of getToolType?.result">
+        <input class="form-check-input" name="{{ttype.id}}" formControlName="toolType" type="checkbox" id="{{ttype.id}}"
+          (change)="onChangeTType(ttype.id, $event)" #ttypes>
+        <label for="{{ttype.id}}">
+          {{ttype.baseKeyValueName}}
+        </label>
+      </span>
+
+      <p class="mb-2 paragraph-color-2">Lidar</p>
+      <span class="form-check" *ngFor="let lider of getLider?.result">
+        <input class="form-check-input" name="{{lider.id}}" formControlName="lidar" type="checkbox" id="{{lider.id}}"
+          (change)="onChangeLider(lider.id, $event)" #liders>
+        <label for="{{lider.id}}">
+          {{lider.baseKeyValueName}}
+        </label>
+      </span>
+
+    </div>
+    <div class="mt-3">
+      <label for="task-id" class="form-label">Duration per task(min)<span class="star-mark"> *</span></label>
+      <input type="text" class="form-control" formControlName="taskDuration" (keypress)="keyPress($event)"
+        [ngClass]="{ 'is-invalid': submitted && f.taskDuration.errors }">
+      <div *ngIf="submitted && f.taskDuration.errors" class="invalid-feedback">
+        <div *ngIf="f.taskDuration.errors.required">Duration time is required</div>
+      </div>
+    </div>
+    <div>
+      <p class="m-0 paragraph-color-1">Require training on task?<span class="star-mark"> *</span></p>
+      <!-- <div class="form-check form-check-inline checkbox">
+        <input class="form-check-input" type="radio" name="Yes"  value="Yes" required>
+        <label class="form-check-label" for="Yes">Yes</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="No" id="No" value="No" required>
+        <label class="form-check-label" for="No">No</label>
+      </div> -->
+      <mat-radio-group [ngClass]="{ 'is-invalid': submitted && f.isTraining.errors}" formControlName="isTraining">
+        <mat-radio-button [value]="true">Yes</mat-radio-button>
+        <mat-radio-button [value]="false">No</mat-radio-button>
+      </mat-radio-group>
+
+      <div *ngIf="submitted && f.isTraining.errors" class="invalid-feedback">
+        <div *ngIf="f.isTraining.errors.required">Select Required Traning</div>
+      </div>
+    </div>
+    <div class="mt-3" *ngIf="taskForm.value?.isTraining">
+      <label for="task-id" class="form-label">Training duration per task(min)<span class="star-mark"> *</span></label>
+      <input type="text" class="form-control" formControlName="traningDuration" (keypress)="keyPress($event)"
+        [ngClass]="{ 'is-invalid': submitted && f.traningDuration.errors }">
+      <div *ngIf="submitted && f.traningDuration.errors" class="invalid-feedback">
+        <div *ngIf="f.traningDuration.errors.required">Training Duration time is required</div>
+      </div>
+    </div>
+    <div class="mt-3">
+      <p class="mb-0 paragraph-color-1">Task users</p>
+      <mat-radio-group [ngClass]="{ 'is-invalid': submitted && f.userType.errors}" formControlName="userType">
+        <mat-radio-button [value]='2'>Crowd </mat-radio-button>
+        <mat-radio-button [value]='1'>Managed </mat-radio-button>
+      </mat-radio-group>
+
+      <div *ngIf="submitted && f.userType.errors" class="invalid-feedback">
+        <div *ngIf="f.userType.errors.required">Select Task users</div>
+      </div>
+    </div>
+    <div class="mb-3" *ngIf="this.data.edit">
+      <button for="task-id" class="form-label upload-files width_100" (click)="uploadtask()">Upload task data</button>
+    </div>
+    <div class="text-end my-3">
+      <div class="">
+        <button type="submit" class="me-3 createbtn">{{this.data.edit ? 'Update' : 'Create'}}</button>
+        <button type="reset" class="cancelbtn" (click)="onReset()">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<!-- model popup -->
+
+<div class="sendinvaite">
+  <div class="modal" id="myModal-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <p class="send-text mt-2"><img class="message-icon" src="../assets/images/message-icon.svg"> Send upload task
+            data link</p>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p class="task-text-1">Task ID</p>
+              <p class="task-text-2">T110</p>
+              <p class="task-text-3">Category & Type</p>
+              <p class="task-txet-4">Annotation, Image</p>
+            </div>
+            <div class="col-md-6">
+              <p class="task-text-5">Task Title</p>
+              <p class="task-text-6">Lane alignment(Mixed)</p>
+              <p class="task-text-7">Upload task data URL</p>
+              <p class="task-text-8">http://portal.aienablement-ptg.com#223e12</p>
+            </div>
+          </div>
+          <div class="line">
+          </div>
+          <p class="select-text mt-2">Select client contacts</p>
+          <table class="table table-hover">
+            <tbody>
+              <tr *ngFor="let contact of clientContacts">
+                <td>
+                  <div class="form-check" *ngFor="let item of checkboxs">
+                    <label class="checkcontainer">
+                      <input type="checkbox" unchecked="unchecked" name="{{item.check}}" (change)="onchanges()"
+                        [(ngModel)]="item.sendinvite" />
+                      <span class="checkmark"></span>
+                    </label>
+                  </div>
+                </td>
+                <td>{{contact.personName}}</td>
+                <td>{{contact.email}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="text-end">
+            <button class="cancel-btn btn" data-bs-dismiss="modal">Cancel</button>
+            <button class="send-btn btn mx-1">Send to client</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="data.comingFromUpload">
+    <p>I am coming from Upload screen</p>
+  </div>
+</div>

@@ -1,0 +1,260 @@
+.numberCount {
+  font-size: 32px;
+  font-weight: bold;
+  background-color: #DDF0DF;
+  padding: 10px 20px;
+  border-radius: 50%;
+}
+
+.bgblue-color {
+  background-color: #448087;
+  padding: 1%;
+}
+
+.bgBody-color {
+  background-color: #F9F9F9;
+}
+
+.footer {
+  margin-top: 159px;
+}
+
+
+.month {
+  color: skyblue;
+}
+
+.font25 {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: #0F0F0F;
+
+}
+
+.card-header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.selectmonth {
+  padding: 0;
+  min-width: 0px;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+
+  .form-select {
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+  }
+
+  .font13 {
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.internal-pad {
+  padding: 2rem;
+  width: 150px;
+  height: 150px;
+  border: 4px solid #ccc;
+  margin: auto;
+  border-radius: 100%;
+  text-align: center;
+}
+
+.f-right {
+  float: right;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.Client-Workflows {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+.User-onboarded {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+.profile {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+.Client-Workflows-1 {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 26px;
+  color: #192A3E;
+}
+
+.admin-type {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 14px;
+  color: #535353;
+}
+
+.No-users-text {
+  text-align: center;
+  color: #6D6D6D;
+}
+
+.progess-status {
+  justify-content: space-evenly;
+}
+
+.card-header {
+  background-color: #FFFFFF;
+
+}
+
+.top-contact {
+  margin-bottom: -13px;
+}
+
+.profile-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 14px;
+  color: #535353;
+}
+
+.progress-bar {
+  border-radius: 10px;
+  color: #2E7D32;
+}
+
+.completed-txt {
+  color: #2E7D32;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.profile {
+  color: #192A3E;
+}
+
+.user-name {
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 20px;
+}
+
+.percentage {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 20px;
+  color: #6D6D6D;
+}
+
+.profile-p {
+  text-align: center;
+  color: #374151;
+}
+
+.footer {
+  margin-top: 150px;
+}
+
+.clr-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+ font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  align-items: center;
+  color: #192A3E;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  padding: 8px 32px 8px 16px;
+
+}
+
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}
+
+.resp-space-2{
+    height: 350px;
+}
+.zero {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: #0F0F0F;
+}
+
+.p-name {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: #374151;
+}
+
+.side-text {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+ font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: #192A3E;
+}

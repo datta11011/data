@@ -1,0 +1,535 @@
+.vert-ellipse {
+  cursor: pointer;
+  color: #2467AA;
+}
+
+.blockbtn {
+  color: #448087;
+  background-color: #fff;
+  padding: 0.3rem 1.0rem;
+  border: 1px solid #448087;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  cursor: pointer;
+  margin-left: 1rem;
+  min-width: 92px;
+
+  i {
+    font-size: 14px;
+    color: #448087;
+  }
+}
+
+.add-user-btn {
+  background: #448087;
+  color: #fff;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #448087;
+  border-radius: 30px;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
+  min-width: 130px;
+  text-align: center;
+}
+
+.categories-btn {
+  background: #fff;
+  color: #448087;
+  padding: 0.7rem 1.6rem;
+  border: 1px solid #448087;
+  border-radius: 30px;
+  cursor: pointer;
+  align-self: center;
+  min-width: 163px;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.create-btns {
+  position: relative;
+  margin-left: 1rem;
+
+  .search-icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    opacity: 0.5;
+  }
+
+  input {
+    padding: 1.3rem;
+    box-shadow: none;
+    border-radius: 30px;
+  }
+}
+
+.f-right {
+  float: right;
+}
+
+.font13 {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.thead-bg {
+  background-color: #f0f0f0;
+}
+
+.amazon-subtable {
+  padding: 0 2rem;
+}
+
+.amazon01desc {
+  margin-bottom: 2rem;
+}
+
+th {
+  font-family: ''Inter', sans-serif';
+}
+
+.dropdown-item:hover {
+  color: #1BA0F2;
+  background-color: #ECF8FF;
+}
+
+.fa-angle-down {
+  padding: 0.4rem 0rem 0.9rem 0.5rem;
+}
+
+.bg-onboarded {
+  /* font-family: "Inter', sans-serif"; */
+  /* font-style: normal; */
+  font-weight: bold;
+  /* font-size: 12px; */
+  /* line-height: 16px; */
+  background-color: #ECF8FF;
+  color: #2467AA;
+  border-radius: 5px;
+}
+
+.menu-icon {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.eye-color {
+  color: #448087;
+  cursor: pointer;
+}
+
+.mat-table {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+// .display {
+//   display: flex;
+//   border: none;
+// }
+
+// .table thead th{
+//     min-width: 130px;
+//   }
+
+.users-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #0F0F0F;
+
+}
+
+.footer {
+  margin-top: 200px;
+}
+
+.month {
+  color: skyblue;
+}
+
+.active {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.clr-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 12px;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #192A3E;
+}
+
+.selectmonth {
+  padding: 0;
+  min-width: 120px;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+
+  .form-select {
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+}
+
+.internal-pad {
+  font-size: 25px;
+  width: 105px;
+  border-radius: 100px;
+}
+
+.bg-green {
+  background-color: #2E7D32;
+}
+
+.progress {
+  margin-bottom: 0.8rem;
+  height: 7px;
+}
+
+.bg-orange {
+  background-color: #F7931E;
+}
+
+.top-contact {
+  margin-bottom: -13px;
+}
+
+.programs-bar {
+  height: 16px;
+}
+
+@media screen and (max-width:768px) {
+
+  .status-color {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.p-name {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #374151;
+}
+
+.completed {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2E7D32;
+}
+
+.User-count {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #192A3E;
+
+}
+
+.card-body {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+
+}
+
+.not-document {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #BAB9BD;
+}
+
+
+
+
+
+.month {
+  color: skyblue;
+}
+
+.font25 {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  color: #0F0F0F;
+}
+
+.active {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-header {
+  background-color: #fff;
+  padding: 1rem;
+}
+
+.selectmonth {
+  padding: 0;
+  min-width: 120px;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  font-size: 12px;
+
+  .form-select {
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.internal-pad {
+  font-size: 28px;
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  border: 5px solid #F0F0F0;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  padding: 8px 32px 8px 16px;
+
+}
+
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}
+
+
+@media screen and (max-width:768px) {
+
+  .status-color {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.User-onboarded {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #192A3E;
+}
+
+
+.side-text {
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #192A3E;
+}
+
+table {
+  width: 100%;
+}
+
+.offcanvas-title {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.casper-text {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  // font-size: 12px;
+}
+
+.specific-text {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.assign-task-btn {
+  border-radius: 20px;
+  color: white;
+  background-color: #A72037;
+  width: 144px;
+  margin-top: 140px;
+}
+
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+  padding: 8px 32px 8px 16px;
+
+}
+
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}
+
+.text-checkbox {
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: center;
+  color: #424242;
+}
+
+.btn-close {
+  background-color: #3f3f3f;
+  border-radius: 27px;
+  padding: 7px;
+  width: 12px;
+  font-size: 11px;
+}
+
+.dropdown-item {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.mat-table {
+  width: 100%;
+}
+
+.mat-header-cell {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+.mat-header-cell span {
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.mat-header-row {
+  height: 3em;
+}
+
+.mat-cell {
+  color: #212121;
+}
+
+.header {
+  padding: 5px;
+}
+
+.matMenuDef {
+  height: 31px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.searchbox {
+  position: relative;
+  margin-left: 1rem;
+
+  .search-icon {
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    opacity: 0.5;
+  }
+
+  input {
+    padding: 1.3rem;
+    box-shadow: none;
+    // border-radius: 25px;
+  }
+}
+
+.addUser-btn {
+  color: #A72037;
+  border: 1px solid #A72037;
+  background-color: #fff;
+  padding: 9px 14px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+.filterIcon{
+  cursor: pointer;
+  margin-bottom: -5px;
+}
+.filterText{
+  margin-right: 8px;
+}

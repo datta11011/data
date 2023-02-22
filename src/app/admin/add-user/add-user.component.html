@@ -1,0 +1,146 @@
+<div class="container-fluid p-0">
+  <div class="text-end">
+    <span class="cross-icon" (click)="onNoClick()"><i class="fas fa-times-circle"></i></span>
+  </div>
+  <div>
+    <h5 class="add-user">{{this.data.edit ? 'Edit User' : 'Add User'}}</h5>
+  </div>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <!-- <input type="hidden" formControlName="id" [(ngModel)]="selId"> -->
+    <div class=" form-group">
+      <label class="form-label">First Name<span class="star-mark"> *</span></label>
+      <input type="text" class="form-control" formControlName="firstName"
+        (keypress)="keyPressAlphaNumericWithCharacters($event)" placeholder="Type here.." pattern="[a-zA-Z][a-zA-Z ]+"
+        [ngClass]="{'is-invalid': (userForm.get('firstName').touched ||  userForm.get('firstName').dirty) &&  !userForm.get('firstName').valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="userForm.get('firstName').errors?.required">
+          Please enter your first name.
+        </span>
+        <span *ngIf="userForm.get('firstName').errors?.pattern">
+          please enter Alpha Characters Allowed.
+        </span>
+      </span>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Last Name <span class="star-mark"> *</span></label>
+      <input type="text" class="form-control" formControlName="lastName" placeholder="Type here.."
+        pattern="[a-zA-Z][a-zA-Z ]+" [ngClass]="{'is-invalid': (userForm.get('lastName').touched ||  userForm.get('lastName').dirty) &&
+       !userForm.get('lastName').valid }" />
+      <span class="invalid-feedback">
+        <span *ngIf="userForm.get('lastName').errors?.required">
+          Please enter your last name.
+        </span>
+        <span *ngIf="userForm.get('lastName').errors?.pattern">
+          please enter Alpha Characters Allowed.
+        </span>
+      </span>
+    </div>
+
+    <div formGroupName="address">
+      <div class="form-group">
+        <label class="form-label">Country<span class="star-mark">*</span></label>
+        <mat-select placeholder="Select" formControlName="countryId" [ngClass]="{'is-invalid': userForm.get('address').errors ||
+        ((userForm.get('address.countryId').touched ||  userForm.get('address.countryId').dirty) &&
+         !userForm.get('address.countryId').valid) }">
+          <mat-option *ngFor="let country of Countries" [value]="country.id"
+            (click)="selectedCountryCode = country.baseKeyValueDesc ">{{country.baseKeyValueName}}
+          </mat-option>
+        </mat-select>
+        <span class="invalid-feedback">
+          <span *ngIf="userForm.get('address.countryId').errors?.required">
+            Please Select your Country.
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="form-label ">Phone Number <span class="star-mark"> *</span></label>
+      <div class="phone-section">
+        <span class="country-code" *ngIf="selectedCountryCode">{{selectedCountryCode}}</span>
+        <input type="text" maxlength="10" class="form-control" (input)="validateEmailPhone($event,1)"
+          formControlName="phone1" placeholder="Enter Mobile Here.." [ngClass]="{'is-invalid': (userForm.get('phone1').touched ||  userForm.get('phone1').dirty) &&
+                      !userForm.get('phone1').valid || isPhoneExists}" required />
+      </div>
+      <span class="invalid-feedback">
+        <span *ngIf="userForm.get('phone1').errors?.required">
+          Mobile Number is Required
+        </span>
+        <span *ngIf="userForm.get('phone1').errors?.pattern">
+          Phone number must be in 10 digit number
+        </span>
+      </span>
+      <span class="isError" *ngIf="isPhoneExists">Phone number already exists</span>
+    </div>
+
+    <div formGroupName="user" *ngxPermissionsOnly="['superadmin']">
+      <div class="form-group">
+        <label class="form-label">Role<span class="star-mark">*</span></label>
+        <mat-select placeholder="Select" formControlName="roleId" [ngClass]="{'is-invalid': userForm.get('user').errors ||
+        ((userForm.get('user.roleId').touched ||  userForm.get('user.roleId').dirty) &&
+         !userForm.get('user.roleId').valid) }">
+          <mat-option *ngFor="let role of Roles " [value]="role.id">{{role.baseKeyValueName}}</mat-option>
+        </mat-select>
+        <span class="invalid-feedback">
+          <span *ngIf="userForm.get('user.roleId').errors?.required">
+            Please Select your role.
+          </span>
+        </span>
+      </div>
+    </div>
+    <div formGroupName="user" *ngxPermissionsOnly="['managerflow']">
+      <div class="form-group">
+        <label class="form-label">Role<span class="star-mark">*</span></label>
+        <mat-select placeholder="Select" formControlName="roleId" [ngClass]="{'is-invalid': userForm.get('user').errors ||
+        ((userForm.get('user.roleId').touched ||  userForm.get('user.roleId').dirty) &&
+         !userForm.get('user.roleId').valid) }">
+          <mat-option *ngFor="let rol of val " [value]="rol.id">{{rol.baseKeyValueName}}</mat-option>
+        </mat-select>
+        <span class="invalid-feedback">
+          <span *ngIf="userForm.get('user.roleId').errors?.required">
+            Please Select your role.
+          </span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="Email" class="form-label">Email <span class="star-mark">*</span></label>
+      <input type="email" class="form-control" formControlName="email1" email="true"
+        (change)="isPeopleTech($event.target)" (input)="validateEmailPhone($event,2)" placeholder="Type here.."
+        [ngClass]="{'is-invalid': (userForm.get('email1').touched ||  userForm.get('email1').dirty) &&
+       !userForm.get('email1').valid || isEmailExists}">
+      <span class="invalid-feedback">
+        <span *ngIf="userForm.get('email1').errors?.required">
+          Email is required.
+        </span>
+        <span *ngIf="userForm.get('email1').errors?.email">
+          Email must be a valid email address.
+        </span>
+      </span>
+      <span class="isError" *ngIf="isEmailExists">Email already exists</span>
+      <span class="isError" *ngIf="isPtgEmail">Only Peopletech email is allowed</span>
+
+    </div>
+    <div class=" form-group" formGroupName="user">
+      <label class="form-label">User ID <span class="star-mark">*</span></label>
+      <input type="text" class="form-control" formControlName="id" placeholder="Type here.." readonly="readonly">
+      <!-- <span class="invalid-feedback">
+        <span *ngIf="userForm.get('userId').errors?.required">
+          Please enter your first name.
+        </span>
+      </span> -->
+    </div>
+    <div class="">
+      <p class="mandatry-txt">Fields marked with <span class="star-mark-1">*</span> are mandatory</p>
+    </div>
+    <div class="text-end">
+      <!-- <button type="submit" class="btn btn-invite">Send Invite</button> -->
+      <button type="submit" class="btn btn-invite"
+        [disabled]="isEmailExists || isPhoneExists || isPtgEmail">{{this.data.edit ?
+        'Update User' : 'Add User'}}</button>
+    </div>
+  </form>
+</div>
+<app-footer></app-footer>

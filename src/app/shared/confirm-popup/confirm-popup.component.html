@@ -1,0 +1,24 @@
+<div *ngIf="popupData">
+    <div class="close-wrapper">
+        <span class="material-symbols-outlined icon">
+            close
+        </span>
+    </div>
+    <div>
+        <div class="heading-wrapper">
+            <span class="material-symbols-outlined" [ngClass]="popupData.iconName">
+                warning
+            </span>
+            <h1>{{popupData.heading}}</h1>
+        </div>
+        <p>{{popupData.description}}</p>
+    </div>
+    <div class="text-center">
+      <button *ngFor="let button of popupData.buttons" (click)="button.onClick()"
+        [ngClass]="{'mat-stroked-button': button.buttonType === 'secondary', 'mat-raised-button': button.buttonType === 'primary'}"
+        color="primary text-center">
+        {{button.label}}
+    </button>
+    </div>
+
+</div>

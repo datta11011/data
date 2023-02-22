@@ -1,0 +1,132 @@
+.star-mark {
+  color: brown;
+  font-size: 15px;
+}
+.cross-icon {
+  cursor: pointer;
+}
+
+.btn-invite {
+  border-radius: 45px;
+  background-color: #a72037;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  height: 37px;
+  width: 140px;
+}
+
+.mandatry-txt {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #6d6d6d;
+}
+
+.add-user {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.form-label {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #6d6d6d;
+}
+
+.add-user-form {
+  width: 100%;
+}
+
+.star-mark-1 {
+  color: brown;
+  font-size: 15px;
+}
+
+.form-select {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #9a9a9a;
+}
+
+// .form-control {
+//   font-family: 'Inter', sans-serif;
+// font-style: normal;
+// font-weight: bold;
+// font-size: 16px;
+// line-height: 20px;
+// color: #212121;
+// }
+.btn-cancel {
+  border-radius: 20px;
+  width: 102px;
+  height: 36px;
+  border: 2px solid #448087;
+  color: #448087;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  height: 40px;
+}
+
+.btn-cancel {
+  border-radius: 20px;
+  width: 102px;
+  height: 36px;
+  border: 2px solid #448087;
+  color: #448087;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  height: 40px;
+}
+
+.close {
+  font-size: 12px;
+  background-color: #707070;
+  border-radius: 98%;
+  height: 25px;
+  width: 25px;
+  color: white;
+}
+
+.font13 {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.isError {
+  color: #dc3545;
+  font-size: 0.875em;
+}
+.phone-section {
+  display: flex;
+  align-items: center;
+  position: relative;
+  & .country-code {
+    background: #eee;
+    padding: 7px 3px;
+  }
+}

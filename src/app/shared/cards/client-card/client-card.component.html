@@ -1,0 +1,60 @@
+
+
+<div class="card box shadow resp-space">
+  <div class="card-header pe-1">
+    <div class="d-flex">
+      <h6 class="Client-Workflows mb-0">Client and Workflows</h6>
+      <div class="selectmonth">
+        <span class="align-self-center font13">Showby:</span>
+        <select class="form-select font13">
+          <option>Workflow</option>
+          <option>August</option>
+          <option>July</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+   <div class="row mt-2">
+    <div class="col-md-6">
+      <div class="text-center">
+        <span class="numberCount">{{totalClientCount}}</span>
+        <p class="down-text my-2">Clients</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="text-center">
+        <span class="numberCount-1">{{totalWorkflowCount}}</span>
+        <p class="down-text my-2">Workflows</p>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-12">
+    <div class="scrollbar mt-3">
+      <div class="d-flex mt-1" *ngFor="let countCl of clientsProgramCount">
+        <div class="d-flex flex-row m-auto bd-highlight mb-3">
+            <div class=" bd-highlight goole-text clientwidth" type="button" matTooltip={{countCl.customer}}>{{countCl.customer | slice:0:10}}<ng-container *ngIf="countCl.customer.length > 5"><b></b></ng-container></div>
+            <!-- <div class=" bd-highlight goole-text ellipsesis" type="button" title={{countCl.customer}}>{{countCl.customer}}</div> -->
+            <!-- <div {{ (countCl.customer != null && countCl.customer.length > 7) ? countCl.customer | slice:0:7)+ "..." : countCl.customer }}></div> -->
+            <div class=" bd-highlight goole-text "> ---</div>
+            <div class=" bd-highlight numberCircle">{{countCl.totalProgram}}</div>
+            <div class=" bd-highlight goole-text wfwidth mx-2"> Workflows</div>
+            <div class=" bd-highlight goole-text ">---</div>
+            <div class=" bd-highlight  numberCircle1 ">{{countCl.totalTasks}}</div>
+            <div class=" bd-highlight goole-text mx-2"> Programs</div>
+        <!-- <p class="goole-text">{{countCl.customer}} <span>---</span> <span class="background-number">2</span> Workflows ------<span class="background-number-1">{{countCl.totalProgram}}</span> Programs</p>  -->
+      </div>
+    </div>   
+    
+    </div>
+
+    
+  </div>
+  <div class="col-12">
+    <div class="text-center">
+     <button type="button" class="workflow-btn btn mt-4" (click)="usrDialog()"><img src="../../../../assets/images/workflow-icon (2).svg" width="17px"> Create an workflow</button>
+     <!-- <button type="button" class="Manageworkflow-btn btn mx-3" routerLink="/client-workflow"><img src="../../../../assets/images/manager-workflow-img.png" width="15px"> Manage workflow</button> -->
+ </div>
+</div>
+</div>

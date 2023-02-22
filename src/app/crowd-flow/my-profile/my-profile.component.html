@@ -1,0 +1,632 @@
+
+
+<div class="container">
+    <h2 class="my-profile mt-5">My Profile</h2>
+    <div class="row mt-4">
+        <div class="col-md-12">
+            <div class="card-body box shadow resp-space">
+                <div class="card-header pe-1">
+                    <div class="row">
+                        <div class="col-md-2 d-flex">
+                            <img class="user-icon mt-3 " src="../../../assets/images/avtar-logo.svg" width="65%"
+                                height="65%">
+                            <img class="edit-icon mx-2 mt-4" src="../assets/images/edit-icon.svg" width="18px"
+                                height="18px">
+                        </div>
+                        <div class="col-md-2 mt-4">
+                            <p class="user-name">Andrew Smith</p>
+                            <P class="crowd">Crowd</P>
+                            <p class="rating"><img src="../assets/images/star.png"> Rating:<span class="number"> 4</span>
+                            </p>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4 mt-3 ">
+                            <p class="p-text">Profile Completion</p>
+                            <div class="row top-contact">
+                                <div class="col-md-4 text-start">
+                                    <p class="percentage">57%</p>
+                                </div>
+                                <div class="col-md-4 text-center ">
+                                    <p class="p-name">Profile</p>
+                                </div>
+                                <div class="col-md-4 text-end">
+                                    <p class="percentage">43%</p>
+                                </div>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar bg-success" style="width:57%">
+                                </div>
+                                <div class="progress-bar bg-danger" style="width:43%">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 text-start">
+                                    <p class="completed">Completed</p>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <p class="not-document">Not Documented</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="banner-color">
+                    <div class="container-fluid py-5 m-0">
+                        <div class="container">
+                            <div class="sidenav-section">
+                                <div class="sidenav">
+                                    <ul class="sedenav-list">
+                                        <li class="sidenav-text" (click)="basicinfo()"  [ngClass]="{'dcactive':dcactive === true}"><img class="basic"
+                                                src="../../../assets/images/number-1.svg">Basic Info</li>
+                                        <li class="sidenav-text" (click)="personalinfo()" [ngClass]="{'imactive':imactive === true}"><img class="personal"
+                                                src="../../../assets/images/number-2.svg">Personal Info</li>
+                                        <li class="sidenav-text" (click)="professionalinfo()" [ngClass]="{'spactive':spactive === true}"><img class="professional"
+                                                src="../../../assets/images/number-3.svg">Professional Info</li>
+                                        <li class="sidenav-text" (click)="earnings()" [ngClass]="{'txactive':txactive === true}"><img class="earnings"
+                                                src="../../../assets/images/number-4.svg">Earnings</li>
+                                        <li class="sidenav-text" (click)="activity()" [ngClass]="{'geactive':geactive === true}"><img class="activity"
+                                                src="../../../assets/images/number-5 (2).svg">Activity History</li>
+                                        <li class="sidenav-text" (click)="payment()" [ngClass]="{'awactive':awactive === true}"><img class="payments"
+                                                src="../../../assets/images/number-6.svg">Payments</li>
+                                        <li class="sidenav-text" (click)="Referrals()"  [ngClass]="{'profileRef': profileRef === true}"><img class="referrals"
+                                                src="../../../assets/images/number-7.svg">Referrals</li>
+                                        <li class="sidenav-text" (click)="others()"  [ngClass]="{'profileothers': profileothers=== true}"><img class="others"
+                                                src="../../../assets/images/number-8.svg">Others</li>
+                                    </ul>
+                                </div>
+                                <div class="sidenav-body px-0">
+                                    <div *ngIf="basicinfoDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Basic Info</h4>
+                                            <form>
+                                                <div class="basic-form mt-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputfirstname"
+                                                                    class="form-label">First Name</label>
+                                                                <input type="firstname" class="form-control"
+                                                                    placeholder="Andrew" id="exampleInputfirstname"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputlastname"
+                                                                    class="form-label">Last Name</label>
+                                                                <input type="lastname" class="form-control"
+                                                                    placeholder="Smith" id="exampleInputlastname">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputcountry"
+                                                                    class="form-label">Country</label>
+                                                                <input type="country" class="form-control"
+                                                                    placeholder="USA" id="exampleInputcountry"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputprovince"
+                                                                    class="form-label">Province</label>
+                                                                <input type="province" class="form-control"
+                                                                    placeholder="Florida" id="exampleInputprovince">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputemail"
+                                                                    class="form-label">Email</label>
+                                                                <input type="email" class="form-control"
+                                                                    placeholder="andrew.smith@gmail.com"
+                                                                    id="exampleInputemail" aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputphone"
+                                                                    class="form-label">Phone</label>
+                                                                <input type="country" class="form-control"
+                                                                    placeholder="+1 6122365789"
+                                                                    id="exampleInputcountry">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <p class="login-credentials mt-2">Login Credentials</p>
+                                            <p class="user-text mt-3"><img src="../assets/images/google-icon.svg"
+                                                    width="23px"> andrew.smith</p>
+                                            <div class="line mt-4">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="personalinfoDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Personal Info</h4>
+                                            <form>
+                                                <div class="basic-form mt-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputfirstname"
+                                                                    class="form-label">First Name</label>
+                                                                <input type="firstname" class="form-control"
+                                                                    placeholder="Andrew" id="exampleInputfirstname"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputlastname"
+                                                                    class="form-label">Last Name</label>
+                                                                <input type="lastname" class="form-control"
+                                                                    placeholder="Smith" id="exampleInputlastname">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputcountry"
+                                                                    class="form-label">Father’s Name/Husband’s
+                                                                    Name</label>
+                                                                <input type="country" class="form-control"
+                                                                    placeholder="Roger Smith" id="exampleInputcountry"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputprovince"
+                                                                    class="form-label">Address</label>
+                                                                <input type="province" class="form-control"
+                                                                    placeholder="1-48D, Bayer Street, California, USA"
+                                                                    id="exampleInputprovince">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputemail"
+                                                                    class="form-label">SSN</label>
+                                                                <input type="email" class="form-control"
+                                                                    placeholder="12234567889" id="exampleInputemail"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputphone" class="form-label">Date
+                                                                    of Birth</label>
+                                                                <input type="country" class="form-control"
+                                                                    placeholder="16/11/1997" id="exampleInputcountry">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <!-- <p class="login-credentials mt-2">Login credentials</p>
+                                            <p class="user-text mt-3"><img src="../assets/images/google-icon.svg"
+                                                    width="23px"> andrew.smith</p> -->
+                                            <div class="line mt-5">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="professionalinfoDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Professional Info</h4>
+                                            <form>
+                                                <div class="basic-form mt-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputfirstname"
+                                                                    class="form-label">Title</label>
+                                                                <input type="firstname" class="form-control"
+                                                                    placeholder="Sales and marketing professional"
+                                                                    id="exampleInputfirstname"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <!-- <div class="mb-3">
+                                                                <label for="exampleInputlastname"
+                                                                    class="form-label">Lastname</label>
+                                                                <input type="lastname" class="form-control"
+                                                                    placeholder="Smith" id="exampleInputlastname">
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label for="exampleInputfirstname"
+                                                                class="form-label">Description</label>
+                                                            <textarea class="text-area" id="w3review" name="w3review"
+                                                                rows="4"
+                                                                cols="50"></textarea>
+                                                        </div>
+                                                        <div class="col">
+                                                            <!-- <div class="mb-3">
+                                                                <label for="exampleInputprovince"
+                                                                    class="form-label">Province</label>
+                                                                <input type="province" class="form-control"
+                                                                    placeholder="Florida" id="exampleInputprovince">
+                                                            </div> -->
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-7 close-icon">
+                                                            <label for="exampleInputfirstname"
+                                                                class="form-label">Skillsets</label>
+                                                            <div class="d-flex">
+                                                                <button class="Business"><i class="fa fa-times"
+                                                                        aria-hidden="true"></i>
+                                                                    BusinessAnalytics</button>
+                                                                <button class="Business mx-1"><i class="fa fa-times"
+                                                                        aria-hidden="true"></i> Leadership</button>
+                                                                <button class="Business mx-1"><i class="fa fa-times"
+                                                                        aria-hidden="true"></i> Problem Solving</button>
+                                                                <button class="Business mx-1"><i class="fa fa-times"
+                                                                        aria-hidden="true"></i> Decision maker</button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-5 responsive-dropdown">
+                                                            <label for="country" class="form-label mb-1 ">Experience
+                                                                Level <span class="star-mark">*</span></label>
+                                                            <div class="d-flex">
+                                                                <select class="form-select selector">
+                                                                    <option selected>2 years</option>
+                                                                    <option value="1">1 years</option>
+                                                                    <option value="2">3 years</option>
+                                                                    <option value="3">4 years</option>
+                                                                </select>
+                                                                <select class="form-select selector mx-1">
+                                                                    <option selected>4 months</option>
+                                                                    <option value="1">1 months</option>
+                                                                    <option value="2">2 months</option>
+                                                                    <option value="3">3 months</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="Business"><i class="fa fa-times"
+                                                            aria-hidden="true"></i> Interpersonal</button>
+                                                </div>
+                                                <button class="Add-skills-btn btn mt-3">Add Skill</button>
+                                                <img class="plus-icon mx-2 mt-3" src="../assets/images/plus-icon.png">
+                                            </form>
+
+                                            <div class="line mt-4">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="earningsDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Earnings</h4>
+                                            <form>
+                                                <table class="table table-borderless mb-0">
+                                                    <thead class="thead-bg">
+                                                        <tr>
+                                                            <th class="headings">Completed Task</th>
+                                                            <th class="headings">Rejected Task</th>
+                                                            <th class="headings">Task Under Review</th>
+                                                            <th class="headings">Total Earnings</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="task-numbers">112</td>
+                                                            <td class="task-numbers">25</td>
+                                                            <td class="task-numbers">5</td>
+                                                            <td class="task-numbers">$48.15</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <p class="history-text">Earnings History</p>
+                                                <table class="table table-hover mb-0">
+                                                    <thead class="main-header">
+                                                        <tr>
+                                                            <th>Withdrawal Method</th>
+                                                            <th>Total ($) <img class="mx-1"
+                                                                    src="../assets/images/down-arrow.svg" width="15px">
+                                                            </th>
+                                                            <th>Start Date <img class="mx-1"
+                                                                    src="../assets/images/down-arrow.svg" width="15px">
+                                                            </th>
+                                                            <th>End Date <img class="mx-1"
+                                                                    src="../assets/images/down-arrow.svg" width="15px">
+                                                            </th>
+                                                            <th>Transaction Status</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Bank transfer</td>
+                                                            <td>5.15</td>
+                                                            <td>Sept 04, 2022</td>
+                                                            <td>Sept 05, 2022</td>
+                                                            <td><span class="Approved-text">Approved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paypal</td>
+                                                            <td>2.15</td>
+                                                            <td>Aug 04, 2022</td>
+                                                            <td>Aug 06, 2022</td>
+                                                            <td><span class="Approved-text">Approved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paypal</td>
+                                                            <td>3.11</td>
+                                                            <td>Aug 01, 2022</td>
+                                                            <td>Aug 01, 2022</td>
+                                                            <td><span class="Approved-text">Approved</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paypal</td>
+                                                            <td>0.47</td>
+                                                            <td>Jul 28, 2022</td>
+                                                            <td>Jul 28, 2022</td>
+                                                            <td><span class="hold-text">On Hold</span></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Paypal</td>
+                                                            <td>3.21</td>
+                                                            <td>Jul 22, 2022</td>
+                                                            <td>Jul 22, 2022</td>
+                                                            <td><span class="Approved-text">Approved</span></td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                            <div class="line mt-5">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="activityDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Activity History</h4>
+                                            <form>
+                                                <div class="row">
+                                                    <div class="col-md-10 mt-3">
+                                                        <p class="history-text">Completed tasks in last 2 months</p>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <select class="form-select selector" id="sel1" name="sellist1">
+                                                            <option>All</option>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <table class="table table-hover mb-0">
+                                                    <thead class="main-header">
+                                                        <tr>
+                                                            <th>Date</th>
+                                                            <th>Requester <img class="mx-1"
+                                                                    src="../assets/images/down-arrow.svg" width="15px">
+                                                            </th>
+                                                            <th>Task Programme</th>
+                                                            <th>Earnings ($)</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>Sept 18, 2022</td>
+                                                            <td>Amazon</td>
+                                                            <td>Lane alignment (Polyline)</td>
+                                                            <td>1.11</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sept 18, 2022</td>
+                                                            <td>Amazon</td>
+                                                            <td>Human identification (Polygon)</td>
+                                                            <td>8.23</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sept 18, 2022</td>
+                                                            <td>Google</td>
+                                                            <td>Cafe/Restaurant identification (Bounding box)</td>
+                                                            <td>1.67</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Sept 08, 2022</td>
+                                                            <td>Google</td>
+                                                            <td>Vehicle identification (Bounding box)</td>
+                                                            <td>10.16</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aug 23, 2022</td>
+                                                            <td>Amazon</td>
+                                                            <td>Street sign annotation (Bounding box)</td>
+                                                            <td>24.58</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Aug 23, 2022</td>
+                                                            <td>Amazon</td>
+                                                            <td>Danger sign identification (Mixed)</td>
+                                                            <td>1.16</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </form>
+                                            <div class="line mt-5">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="paymentDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Payments</h4>
+                                            <form>
+                                            <p class="history-text mt-2">Currently Active</p>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                 <img src="../assets/images/debit-card1.png" width="100%">
+                                                </div>
+                                                <div class="col-md-4 modify-text">
+                                                    <p>MODIFY</p>
+                                                    <p>REMOVE</p>
+                                                </div>
+                                            </div>
+                                            <p class="withdraw-text">Withdrawal Options Available. </p>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    <img class="card-1" src="../assets/images/debit-card1.png" width="100%">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="../assets/images/debit-card2.png" width="100%">
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="../assets/images/debit-card3.png" width="100%">
+                                                </div>
+                                            </div>
+                                 
+                                            </form>
+                                            <div class="line mt-2">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="ReferralsDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Referrals</h4>
+                                            <form>
+                                            <p class="Referral-text mt-2">Send an invite to your friends and receive bonuses for the tasks they complete. You will receive from 5% to 20% of the task price for each successfully completed task. </p>
+                                            <p class="send-text">Send Invite Via</p>
+                                            <div class="text-center">
+                                                <ul class="social-login">
+                                                  <li class="social-icon social-facebook"><img src="../../../../assets/images/microsoft-1.svg" width="90%"></li>
+                                                  <li class="social-icon social-google mx-2"><img src="../../../../assets/images/google-1.svg"  width="80%"></li>
+                                                  <li class="social-icon social-linkedin mx-2"><img src="../../../../assets/images/linkedin-1.svg"  width="80%"></li>
+                                                  <li class="social-icon social-instagram mx-2"><img src="../../../../assets/images/Facebook-1.svg"  width="80%"></li>
+                                                  <li class="social-icon social-instagram mx-2"><img src="../../../../assets/images/twitter-1.svg"  width="80%"></li>
+                                                </ul>
+                                              </div>
+                                              <div class="d-flex">
+                                          <input type="firstname" class="form-control Referrals-input"
+                                              placeholder="https://platform.peopletechaiml.com/aix11e334" id="exampleInputfirstname"
+                                              aria-describedby="emailHelp"> 
+                                              <img class="mx-2"  src="../assets/images/copy-icon.svg">
+                                            </div>
+                                              <label class="text-referrals mt-2">Referrals</label>
+                                              <table class="table table-hover mb-0">
+                                                <thead class="main-header">
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Referred On</th>
+                                                        <th>Status</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Stephen Smith</td>
+                                                        <td>Sept 18, 2022</td>
+                                                        <td><span class="Approved-text">Accepted</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sept 18, 2022</td>
+                                                        <td>Amazon</td>
+                                                        <td><span class="Approved-text">Accepted</span></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Sept 18, 2022</td>
+                                                        <td>Google</td>
+                                                        <td><span class="Approved-text">Accepted</span></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            </form>
+                                            <div class="line mt-2">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="next-btn btn mx-2" type="button">Next</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div *ngIf="othersDiv">
+                                        <div class="basic-info mx-3">
+                                            <h4 class="basic-text">Others</h4>
+                                            <form>
+                                                <div class="other-form mt-4">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <div class="mb-3">
+                                                                <label for="exampleInputfirstname"
+                                                                    class="form-label">Certifications</label>
+                                                                <input type="firstname" class="form-control"
+                                                                    placeholder="Expert in ML, AI analysts, Phd visual science"
+                                                                    id="exampleInputfirstname"
+                                                                    aria-describedby="emailHelp">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <form action="/action_page.php">
+                                                        <p><label class="Description-text" for="w3review">Certification Description</label></p>
+                                                        <textarea class="text-area" id="w3review" name="w3review"
+                                                            rows="4"
+                                                            cols="50"></textarea>
+                                                    </form>
+                                                </div>
+                                            </form>
+                                            <p class="login-credentials mt-2">Attach Documents</p>
+                                            <button class="upload-btn btn" type="button"><img
+                                                    src="../assets/images/upload-icon.svg" width="20px">Upload</button>
+                                            <div class="line mt-4">
+                                            </div>
+                                            <div class="text-end mt-5">
+                                                <button class="previous-btn btn" type="button">Previous</button>
+                                                <button class="save-btn btn mx-2" type="button">Save and
+                                                    complete</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="mt-5">
+   
+</div>

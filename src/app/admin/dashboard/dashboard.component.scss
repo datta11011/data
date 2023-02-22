@@ -1,0 +1,601 @@
+// @import './../../../../variables.scss';
+
+.bgblue-color {
+  background-color: #448087;
+  padding: 0.2%;
+}
+
+.bgBody-color {
+  background-color: #f9f9f9;
+}
+
+.show {
+  text-align: start;
+  margin-top: -32px;
+  color: #6a707e;
+  float: right;
+}
+
+.show-1 {
+  text-align: right;
+  margin-top: -32px;
+  color: #6a707e;
+  float: right;
+}
+
+.month {
+  color: skyblue;
+}
+
+.percentage {
+  font-weight: bold;
+  font-size: xxx-large;
+  border-radius: 200px;
+  width: 159px;
+  height: 156.5px;
+  left: 37px;
+  top: 79px;
+  border: 7px solid #f0f0f0;
+  padding: 41px;
+}
+
+.user-icon {
+  width: 130px;
+  height: 130px;
+  position: relative;
+}
+
+.completed {
+  color: #2e7d32;
+  margin-left: -21px;
+}
+
+.your-profile {
+  background-color: #a72037;
+  color: white;
+  border-radius: 40px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 38px;
+  width: 80%;
+}
+
+.Not-documented {
+  text-align: right;
+}
+
+.per {
+  text-align: left;
+  margin-left: -21px;
+  color: #bab9bd;
+}
+
+.perc {
+  text-align: right;
+}
+
+.Time-spent {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.percentage-2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: xxx-large;
+  border: #f0f0f0;
+  border-radius: 50px;
+}
+
+.percentage-1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: xxx-large;
+  border: #f0f0f0;
+  border-radius: 50px;
+  // background-color: darkgray;
+  // width: 58px;
+}
+
+.available-1 {
+  text-align: left;
+  color: #bab9bd;
+}
+
+.available {
+  text-align: center;
+  color: #bab9bd;
+}
+
+.line {
+  position: absolute;
+  height: 1px;
+  left: -22px;
+  right: -17px;
+  top: 15px;
+  background: #ebeff2;
+}
+
+.Programs {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.card-body {
+  padding: 20px;
+  width: 100%;
+}
+
+.dropdown {
+  margin-top: -6px;
+}
+
+.no-users {
+  text-align: center;
+  padding: 160px;
+  color: #bab9bd;
+}
+
+.active {
+  margin-bottom: 0rem;
+}
+
+.workflow-btn {
+  color: #448087;
+  border: 0.1rem solid #448087;
+  border-radius: 20px;
+}
+.hi-user {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+  font-style: bold;
+}
+.people-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+}
+.empty {
+  position: absolute;
+  width: 408px;
+  height: 1px;
+  background: #ebeff2;
+  margin-top: 9px;
+}
+
+.Configure-client {
+  text-align: left;
+  color: black;
+}
+
+.star-mark {
+  color: red;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.add-contacts {
+  color: #2467aa;
+}
+
+.form-background {
+  background-color: #f0f0f0;
+  padding: 12px;
+}
+
+.fields-marked {
+  margin-top: 60px;
+}
+
+.createworkflow-btn {
+  border-radius: 20px;
+  padding: 10px 35px;
+  border: 1px solid #a72037;
+  background-color: #a72037;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #2467aa;
+  font-weight: bold;
+}
+
+//   ::placeholder{
+//     font-weight: bold;
+//   }
+.profile {
+  font-weight: bold;
+}
+.card-header {
+  background-color: white;
+  padding: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .demo-btn {
+    padding: 5px 15px;
+  }
+
+  .Signup-nowbtn {
+    padding: 5px 13px;
+  }
+}
+
+.month {
+  color: skyblue;
+}
+.font25 {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 59px;
+  text-align: center;
+  color: #0f0f0f;
+}
+.active {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.clr-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 14px;
+}
+.selectmonth {
+  padding: 0;
+  min-width: 120px;
+  margin-left: auto;
+  border: none;
+  display: flex;
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  .form-select {
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-family: "" Inter ", sans-serif";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+.internal-pad {
+  font-size: 16px;
+  width: 170px;
+  height: 170px;
+  border-radius: 100px;
+  border: 5px solid #f0f0f0;
+  margin-top: 22px;
+}
+
+@media screen and (max-width: 768px) {
+  .status-color {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.User-onboarded {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #192a3e;
+}
+@media screen and (max-width: 768px) {
+  .status-color {
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+.program-text {
+  font-family: "Inter", sans-serif;
+  font-weight: bold;
+  font-size: 15px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.time-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 16px;
+  color: rgba(0, 0, 0, 0.6);
+}
+.zero {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 76px;
+  text-align: center;
+  color: #0f0f0f;
+}
+.available-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: #bab9bd;
+}
+.rating-text {
+  text-align: right;
+  margin-top: -25px;
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #6a707e;
+}
+.three-number {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  color: #2e7d32;
+}
+
+// .progress{
+//     height: 5px;
+//     background-color: #ccc;
+// }
+.range-count {
+  list-style: none;
+  padding: 0;
+  margin-top: -15px;
+  display: flex;
+  justify-content: space-between;
+}
+.f-right {
+  float: right;
+}
+h5 {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+.admin-type {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+}
+.progess-status {
+  justify-content: space-evenly;
+}
+.profile-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+}
+.progress-bar {
+  color: #2e7d32;
+}
+.completed {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2e7d32;
+}
+
+.profile {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  color: #192a3e;
+}
+
+.user-name {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.percentage {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #6d6d6d;
+}
+.p-name {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 20px;
+  color: #374151;
+}
+.profile-p {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #374151;
+}
+
+.Complete-btn {
+  border-radius: 20px;
+  background-color: #a72037;
+  color: white;
+}
+.zero-number {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 38px;
+  color: #424242;
+}
+.review-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #535353;
+}
+.resp-space-1 {
+  height: 255px;
+}
+.form-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background-position: calc(100% - 12px) center !important;
+  background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>")
+    no-repeat;
+  padding: 8px 32px 8px 16px;
+}
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}
+
+.footer-end {
+  margin-top: 350px;
+}
+.bgblue-color {
+  background-color: #448087;
+  padding: 0.3%;
+}
+.bgBody-color {
+  background-color: #f9f9f9;
+}
+
+.footer {
+  margin-top: 159px;
+}
+
+.top-contact {
+  margin-bottom: -13px;
+}
+.User-onboarded-2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: #192a3e;
+}
+
+.font13 {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.side-text {
+  font-family: "" Inter ", sans-serif";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #192a3e;
+}
+
+.footer {
+  background: #e6e6e6;
+  bottom: 0;
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  li {
+    margin-right: 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: #0f0f0f;
+  }
+}
+.ptg-group {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #9a9a9a;
+}
+
+.user-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f0f0f;
+}
+.privacy-text {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #0f0f0f;
+}
+
+.donut-chart {
+  margin: 10px;
+  display: inline-block;
+  border-radius: 50%;
+  width: 171px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

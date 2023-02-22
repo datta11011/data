@@ -1,0 +1,324 @@
+<!-- <p>users-table works!</p> -->
+<div class="bg-color">
+    <div class="container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1>Users</h1>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="workflow-btn btn" data-bs-toggle="" data-bs-target="#exampleModal">Add User</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="Categories-btn btn" data-bs-toggle="" data-bs-target="#exampleModal"> Categories</button>
+                </div>
+              </div>
+            </div>
+                    <!-- table section -->
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-md-10">
+                          <div class="table-responsive">
+                              <table class="table">
+                                  <thead class="table-secondary">
+                                    <tr>
+                                    <th>Name</th>
+                                    <th>
+                                      <div class="dropdown">
+                                          <button type="button" class="btn dropdown" data-bs-toggle="dropdown">
+                                            Role  <span><img src="../../../assets/images/role bars.png" alt=""></span>
+                                          </button>
+                                          <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="">Manager</a></li>
+                                            <li><a class="dropdown-item" href="">Data Analyst</a></li>
+                                            <li><a class="dropdown-item" href="">QA</a></li>
+                                            <li><a class="dropdown-item" href="">SME</a></li>
+                                            <li><a class="dropdown-item" href="">Crowd</a></li>
+                                            <li><a class="dropdown-item" href="">Super admin</a></li>
+                                          </ul>
+                                        </div>
+                                    </th>
+                                    <th>Onborded on</th>
+                                    <th>Email</th>
+                                    <th>Phone</th>
+                                    <th>Status</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    </tr>
+                                  </thead>
+                                  <tbody class="table-group-divider">
+                                  <tr>
+                                    <td>Annie Stewart</td>
+                                    <td>Super</td>
+                                    <td>Dedc 04,2021</td>
+                                    <td>anniestewart@peopletech.com</td>
+                                    <td>+91 1223456789</td>
+                                    <td><div class="alert alert-primary" role="alert">
+                                      Onborded
+                                    </div></td>
+                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg></td>
+                                    <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></span> Remove</button>
+                                      </td>
+                                    <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                      <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg></span> Block</button></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Annie Stewart</td>
+                                      <td>Manager</td>
+                                      <td>Dedc 04,2021</td>
+                                      <td>anniestewart@peopletech.com</td>
+                                      <td>+91 1223456789</td>
+                                      <td><div class="alert alert-primary" role="alert">
+                                        Onborded
+                                      </div></td>
+                                      <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                          <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                          <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                        </svg></td>
+                                      <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg></span> Remove</button>
+                                        </td>
+                                      <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                      </svg></span> Block</button></td>
+                                  </tr>
+                                  <tr>
+                                      <td>Annie Stewart</td>
+                                      <td>Crowd</td>
+                                      <td>Dedc 04,2021</td>
+                                      <td>anniestewart@peopletech.com</td>
+                                      <td>+91 1223456789</td>
+                                      <td><div class="alert alert-primary" role="alert">
+                                        Onborded
+                                      </div></td>
+                                      <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                          <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                          <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                        </svg></td>
+                                      <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                      </svg></span> Remove</button>
+                                        </td>
+                                      <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                        <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                      </svg></span> Block</button></td>
+                                   </tr>
+                                   <tr>
+                                    <td>Annie Stewart</td>
+                                    <td>Super</td>
+                                    <td>Dedc 04,2021</td>
+                                    <td>anniestewart@peopletech.com</td>
+                                    <td>+91 1223456789</td>
+                                    <td><div class="alert alert-primary" role="alert">
+                                      Onborded
+                                    </div></td>
+                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                      </svg></td>
+                                    <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></span> Remove</button>
+                                      </td>
+                                    <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                      <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg></span> Block</button></td>
+                                 </tr>
+                                 <tr>
+                                  <td>Annie Stewart</td>
+                                  <td>Crowd</td>
+                                  <td>Dedc 04,2021</td>
+                                  <td>anniestewart@peopletech.com</td>
+                                  <td>+91 1223456789</td>
+                                  <td><div class="alert alert-primary" role="alert">
+                                    Onborded
+                                  </div></td>
+                                  <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg></td>
+                                  <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg></span> Remove</button>
+                                    </td>
+                                  <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                  </svg></span> Block</button></td>
+                               </tr>
+                               <tr>
+                                <td>Annie Stewart</td>
+                                <td>Crowd</td>
+                                <td>Dedc 04,2021</td>
+                                <td>anniestewart@peopletech.com</td>
+                                <td>+91 1223456789</td>
+                                <td><div class="alert alert-primary" role="alert">
+                                  Onborded
+                                </div></td>
+                                <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                    <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                    <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                  </svg></td>
+                                <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                </svg></span> Remove</button>
+                                  </td>
+                                <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                  <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                </svg></span> Block</button></td>
+                             </tr>
+                             <tr>
+                              <td>Annie Stewart</td>
+                              <td>Manager</td>
+                              <td>Dedc 04,2021</td>
+                              <td>anniestewart@peopletech.com</td>
+                              <td>+91 1223456789</td>
+                              <td><div class="alert alert-primary" role="alert">
+                                Onborded
+                              </div></td>
+                              <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                  <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                </svg></td>
+                              <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                              </svg></span> Remove</button>
+                                </td>
+                              <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                              </svg></span> Block</button></td>
+                           </tr>
+                                  <tr>
+                                    <td>Annie Stewart</td>
+                                    <td>Super</td>
+                                    <td>Dedc 04,2021</td>
+                                    <td>anniestewart@peopletech.com</td>
+                                    <td>+91 1223456789</td>
+                                    <td><div class="alert alert-success" role="alert">
+                                      Invite accepted
+                                    </div></td>
+                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg></td>
+                                    <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></span> Remove</button>
+                                      </td>
+                                    <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                      <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg></span> Block</button></td>
+                                  </tr>
+                                  <tr>
+                                    <td>Annie Stewart</td>
+                                    <td>Super</td>
+                                    <td>Dedc 04,2021</td>
+                                    <td>anniestewart@peopletech.com</td>
+                                    <td>+91 1223456789</td>
+                                    <td><div class="alert alert-danger" role="alert">
+                                      Invite sent
+                                    </div></td>
+                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg></td>
+                                    <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></span> Remove</button>
+                                      </td>
+                                    <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                      <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg></span> Block</button></td>
+                                  </tr>  
+                                  <tr>
+                                    <td>Annie Stewart</td>
+                                    <td>Manager</td>
+                                    <td>Dedc 04,2021</td>
+                                    <td>anniestewart@peopletech.com</td>
+                                    <td>+91 1223456789</td>
+                                    <td><div class="alert alert-primary" role="alert">
+                                      Onborded
+                                    </div></td>
+                                    <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                      </svg></td>
+                                    <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                      <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                    </svg></span> Remove</button>
+                                      </td>
+                                    <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                      <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                    </svg></span> Block</button></td>
+                                 </tr>
+                                 <tr>
+                                  <td>Annie Stewart</td>
+                                  <td>Super</td>
+                                  <td>Dedc 04,2021</td>
+                                  <td>anniestewart@peopletech.com</td>
+                                  <td>+91 1223456789</td>
+                                  <td><div class="alert alert-primary" role="alert">
+                                    Onborded
+                                  </div></td>
+                                  <td><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg></td>
+                                  <td> <button class="removeBtn" type="submit"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                                  </svg></span> Remove</button>
+                                    </td>
+                                  <td><button class="blockCancelBtn" type="reset"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-slash-circle" viewBox="0 0 16 16">
+                                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                                    <path d="M11.354 4.646a.5.5 0 0 0-.708 0l-6 6a.5.5 0 0 0 .708.708l6-6a.5.5 0 0 0 0-.708z"/>
+                                  </svg></span> Block</button></td>
+                               </tr>                         
+                                         
+                                     
+                                 
+                                  </tbody>
+                                </table>
+                          </div>
+                      </div>
+                      <!-- cards sections -->
+                      <div class="col-md-2">
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-body">
+                              card-1
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="card">
+                            <div class="card-body">
+                              card-2
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      
+                 
+                      </div>
+                    </div>
+                    
+    </div>
+</div>

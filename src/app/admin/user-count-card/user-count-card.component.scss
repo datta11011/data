@@ -1,0 +1,148 @@
+
+@media screen and (max-width:768px) {
+
+  .demo-btn{
+   padding: 5px 15px;
+  }
+
+  .Signup-nowbtn{
+   padding: 5px 13px;
+  }
+
+}
+
+.month {
+  color: skyblue;
+}
+.font25{
+  font-size: 25px;
+}
+.active {
+  margin-bottom: 0;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.card-header{
+  background-color: #fff;
+  padding: 1rem;
+}
+.clr-list{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: 12px;
+}
+.selectmonth{
+  padding: 0;
+  min-width: 120px;
+  margin-left: auto;
+  border: none;
+  display: flex; 
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+  .form-select{
+    border: none;
+    padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+    color: #2dc4ff;
+    box-shadow: none !important;
+    text-align: left;
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+  }
+  .font13{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+  }
+}
+.internal-pad{
+  font-size: 25px;
+  width: 105px;
+  border-radius: 100px;
+}
+.bg-green{
+  background-color: #2E7D32;
+}
+.progress{
+  margin-bottom: 0.8rem;
+  height: 7px;
+}
+.bg-orange{
+ background-color: #F7931E; 
+}
+
+.top-contact{
+  margin-bottom: -13px;
+}
+.programs-bar{
+  height: 16px;
+}
+@media screen and (max-width:768px) {
+
+  .status-color{
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+.p-name{
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 20px;
+color: #374151;
+}
+.completed{
+  font-family: ''Inter', sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #2E7D32;
+}
+.User-count{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 20px;
+line-height: 28px;
+color: #192A3E;
+
+}
+.card-body{
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+color: rgba(0, 0, 0, 0.6);
+
+}
+.not-document{
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+color: #BAB9BD;
+}
+.form-select{
+	appearance:none;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	-ms-appearance:none;
+    background-position: calc(100% - 12px) center !important;
+    background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+    padding: 8px 32px 8px 16px;
+   
+}
+/* To remove the arrow of select element in IE */
+.form-select::-ms-expand {
+  display: none;
+}

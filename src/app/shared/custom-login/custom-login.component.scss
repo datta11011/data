@@ -1,0 +1,96 @@
+.navbg{
+  background-color: #fff;
+  padding: 39px 32px;
+}
+
+.logincard {
+  padding: 2rem 2rem 0rem 2rem;
+  box-shadow: 0px 1.5px 0px 0px #ccc;
+  margin-top: -20px;
+}
+.signin-head{
+  font-weight: 400;
+font-family: 'Inter', sans-serif;
+font-size: 30px;
+margin-top: 60px;
+}
+.sign-btn {
+  margin: auto;
+  border-radius: 50px;
+  background: #A81E30;
+  color: #fff !important;
+  cursor: pointer;
+  border: 1px solid #A81E30;
+  width: 159px;
+  height: 46px;
+  font-weight: 500;
+}
+
+.singup-btn{
+  text-decoration: none;
+  color: #2467AA;
+  font-weight: bold;
+}
+.notuser{
+  color: #000000;
+  font-weight: 500;
+}
+label{
+  color: #6D6D6D;
+  font-weight: bold;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #F0F0F0;
+  text-align: center;
+  margin-top: 20px;
+}
+ul{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: center;
+  margin-top: 5px;
+  li{
+    margin-right: 1.5rem;
+    a{
+      text-decoration: none;
+      color: #505050;
+    }
+  }
+}
+.f-social-media-icon {
+  .fb, .link, .print{
+    height: 28px;
+  }
+  .twi{
+    height: 23px;
+  }
+  .insta{
+    height: 25px;
+  }
+}
+.btm-mrgn{
+margin-bottom: 1.5rem;
+font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 20px;
+color: #6D6D6D;
+}
+.ptg-group{
+  color: #9A9A9A;
+  height: 50px;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px){
+
+  .logincard {
+    padding: 0.7rem 1rem;
+  }
+}

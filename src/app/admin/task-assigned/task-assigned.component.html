@@ -1,0 +1,28 @@
+<div class="text-end">
+    <span class="cross-icon" (click)="onNoClick()"><i class="fas fa-times-circle"></i></span>
+</div>
+<h2 mat-dialog-title>Assign Task</h2>
+<mat-dialog-content class="mat-typography">
+    <h3 class="mb-0 taskName-heading">Task name</h3>
+    <p class="taskName-para">{{title}}</p>
+    <div class="mt-4">
+        <h4>Choose assignees from a list of resources/users <span class="star-mark"> *</span></h4>
+        <span class="categories-btn" data-bs-toggle="dropdown">Categories <i
+          class="fas fa-angle-down down-arrow"></i></span>
+      <ul class="dropdown-menu">
+        <li><mat-checkbox class="example-margin">Data analyst</mat-checkbox> </li>
+        <li><mat-checkbox class="example-margin">SME</mat-checkbox></li>
+       <li> <mat-checkbox class="example-margin">Reviewer</mat-checkbox></li>
+      </ul>
+    </div>
+    <div class="mt-3">
+        <mat-label class="form-label ">Notes to user(optional)</mat-label>
+        <textarea id="w3review" name="w3review" rows="4" cols="50" style="border: 1px solid #D9D9D9"></textarea>
+    </div>
+    <p  class="req-txt">Fields marked with <span class="star-mark"> *</span> are mandatory</p>
+
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial class="TaskAssingn-btn">Assign Task</button>
+</mat-dialog-actions>

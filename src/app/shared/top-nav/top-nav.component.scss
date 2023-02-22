@@ -1,0 +1,144 @@
+.user-det {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    display: flex;
+    img {
+      height: 35px;
+      align-self: center;
+    }
+  }
+  .logout-left {
+    left: 77px;
+  }
+}
+.mail-icon {
+  cursor: pointer;
+  // margin-right: 16px;
+  color: #2467aa;
+  border: 1px solid #fff;
+  // padding: 8px 12px;
+  border-radius: 5px;
+  // background-color: #ecf8ff;
+}
+
+.logout-right {
+  left: 86%;
+  top: 75px;
+}
+.fa{
+  font-size: 16px;
+  margin-top: 7px; 
+  
+}
+.nav-link {
+  color: inherit !important;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  font-style: bold;
+}
+.top-layer {
+  position: absolute;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  opacity: 0.9;
+  padding: 30px 100px;
+}
+.navbar-expand-lg {
+  background-color: #fff;
+}
+.user-name1{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  color: #000000;
+  
+}
+.bg-light {
+  background-color: #ffffff !important;
+  background-color: transparent;
+}
+.user-name {
+  justify-content: baseline;
+}
+.navbar-bg {
+  background-color: #fff;
+}
+.nav-item {
+  margin-left: 1rem;
+}
+.navangle-down {
+  margin-left: 8px;
+}
+
+.dropdown-item:hover {
+  color: #1ba0f2;
+  background: none;
+  cursor: pointer;
+}
+
+.dropdown-item {
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 17px;
+line-height: 20px;
+color: #535353;
+font-style: bold;
+}
+
+// .user-name{
+//  justify-content: baseline;
+// }
+// .dropdown-item:hover {
+//   color: #1ba0f2 !important;
+//   font-size: 16px;
+//   align-items: center;
+//   background-color: transparent;
+// }
+.settings-text{
+  opacity: 0.4;
+}
+.navbar-collapse {
+  font-weight: bold;
+  color: #000000;
+}
+
+ul {
+  list-style: none;
+}
+.navbar {
+  padding: 2rem;
+}
+.avtar-icon {
+  margin-left: -10px;
+  cursor: pointer;
+}
+
+
+.scrollbar {
+  height: 135px;
+  overflow-y: scroll;
+  width: 98%;
+}
+
+::-webkit-scrollbar{
+  background-color: rgb(168, 163, 163);
+  border-radius: 50px;
+  width: 5px;
+ }
+
+ ::-webkit-scrollbar-thumb{
+  background-color: rgb(88, 87, 87);
+  border-radius: 5px;
+ }

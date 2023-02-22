@@ -1,0 +1,208 @@
+<!-- (click)="fileInputUpload.click()" appDragDrop (onFileDropped)="filesDropped($event, fileInputUpload)" -->
+<div class="container">
+    <div>#T{{tId}}</div>
+    <h3 class="lane-alignment">Lane alignment (mixed)</h3>
+    <div class="d-flex mt-4">
+        <p class="Category">Category</p>
+        <p class="Type mx-5">Type</p>
+    </div>
+    <div class="d-flex">
+        <p>Annotation</p>
+        <p class="mx-4">Image</p>
+    </div>
+    <h5 class="upload-text mt-2">Upload task data</h5>
+    <p class="images-below">Upload a single or multiple images below</p>
+
+    <div class="col-md-4">
+        <div class="card-responsive" appDragDrop (files)="uploadTaskDatas($event,'file')">
+            <div class="card-body box shadow">
+                <div class="text-center">
+                    <img src="../assets/images/up-arrow.png">
+
+                    <h6 class="mt-2">Drag and drop or <a class="browse cp" type="file" id="myfile" name="myfile"
+                            (click)="fileUpload.click()"> <span class="browser-text">Browse </span></a></h6>
+                    <input #fileUpload type="file" multiple (change)="uploadTaskDatas($event,'browse')"
+                        style="display:none">
+                </div>
+                <p class="uploading-image ">Attach images (individual or zip) here for uploading task data</p>
+                <!-- <div class="progress" style="height: 8px; width:90%; margin:auto;">
+                    <div class="progress-bar" style="width:40%;height:10px"></div>
+                </div> -->
+            </div>
+        </div>
+
+        
+        <div class="img-card" *ngIf="taskDatas!=null && taskDatas.length!=0 ">
+            <div class="uploaded-images" *ngIf="taskDatas!=null && taskDatas.length!=0" >
+                    <div class="images-uploaded" *ngFor="let item of taskDatas ;let indexElement=index">
+                        <div class="img-tile" >
+                            <div class="row" >
+                                <div class="col-md-6" >Task {{indexElement + 1}}</div>
+                                <div class="col-md-6 imgclose">
+                                    <a (click)="removeUploadedTaskDatas(item,indexElement)" class="cp">x</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <img  height="150px" width="300px" src="{{item.previewFile}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {{item.fileName}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">320X200</div>
+                                <div class="col-md-6 imgclose">
+                                    {{item.fileSize}} kb
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="upbtnnav">
+                <button class="btn-Upload btn" (click)="submitTaskDatas()">Upload</button>&nbsp;<button
+                    class="btn-Upload btn" (click)="cancelUploadedTaskDatas()">Cancel</button>
+            </div>
+        </div>
+
+        <!-- <div class="button mt-4">
+            <input type="file"c style="display:none" accept="image/*">
+            <button class="btn-Upload btn" >Upload</button>
+        </div> -->
+
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <h5 class="upload-text mt-5">Upload training data</h5>
+    <p class="images-below">Upload a single or multiple images below</p>
+
+    <div class="col-md-4">
+        <div class="card-responsive" appDragDrop (files)="uploadTrainingDatas($event,'file')">
+            <div class="card-body box shadow">
+                <div class="text-center">
+                    <img src="../assets/images/up-arrow.png">
+
+                    <h6 class="mt-2">Drag and drop or <a class="browse cp" type="file" id="myfile" name="myfile"
+                            (click)="fileUploadtd.click()"> <span class="browser-text"> Browse</span></a></h6>
+                    <input #fileUploadtd type="file" multiple (change)="uploadTrainingDatas($event,'browse')"
+                        style="display:none">
+                </div>
+                <p class="uploading-image ">Attach images (individual or zip) here for uploading task data</p>
+                <!-- <p class="uploading-image">Uploading image 4 of 5</p>
+                <div class="progress" style="height:8px">
+                    <div class="progress-bar" style="width:40%;height:10px"></div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="img-card" *ngIf="trainingDatas!=null && trainingDatas.length!=0">
+            <div class="uploaded-images" *ngIf="trainingDatas!=null && trainingDatas.length!=0">
+                    <div  class="images-uploaded"  *ngFor="let item of trainingDatas;let indexElement=index">
+                        <div class="img-tile">
+                            <div class="row">
+                                <div class="col-md-6">Task {{indexElement + 1}}</div>
+                                <div class="col-md-6 imgclose">
+                                    <a (click)="removeUploadedTrainingDatas(item,indexElement)" class="cp">x</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img height="150px" width="300px" src="{{item.previewFile}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {{item.fileName}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">320X200</div>
+                                <div class="col-md-6 imgclose">
+                                    {{item.fileSize}} kb
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="upbtnnav">
+                <button class="btn-Upload btn" (click)="submitTrainingDatas()">Upload</button>&nbsp;<button
+                    class="btn-Upload btn" (click)="cancelUploadedTrainingDatas()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="clear: both;"></div>
+
+    <h5 class="upload-text mt-5">Upload instructions</h5>
+    <p class="images-below">Upload instructions document</p>
+
+    <div class="col-md-4">
+
+
+        <div class="card-responsive" appDragDrop (files)="uploadInstructions($event,'file')">
+            <div class="card-body box shadow">
+                <div class="text-center">
+                    <img src="../assets/images/up-arrow.png">
+
+                    <h6 class="mt-2">Drag and drop or <a class="browse cp" type="file" id="myfile" name="myfile"
+                            (click)="fileUploadIn.click()"><span class="browser-text"> Browse</span></a></h6>
+                    <input #fileUploadIn type="file" multiple (change)="uploadInstructions($event,'browse')"
+                        style="display:none">
+                </div>
+                <p class="uploading-image ">Attach images (individual or zip) here for uploading task data</p>
+                <!-- <p class="uploading-image">Uploading image 4 of 5</p>
+                <div class="progress" style="height:8px">
+                    <div class="progress-bar" style="width:40%;height:10px"></div>
+                </div> -->
+            </div>
+        </div>
+
+        <div class="img-card" *ngIf="instructionDatas!=null && instructionDatas.length!=0">
+            <div class="uploaded-images" *ngIf="instructionDatas!=null && instructionDatas.length!=0">
+                    <div  class="images-uploaded"  *ngFor="let item of instructionDatas;let indexElement=index">
+                        <div class="img-tile">
+                            <div class="row">
+                                <div class="col-md-6">Task {{indexElement + 1}}</div>
+                                <div class="col-md-6 imgclose">
+                                    <a (click)="removeUploadedInstructions(item,indexElement)" class="cp">x</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img height="150px" width="300px" src="{{item.previewFile}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    {{item.fileName}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">320X200</div>
+                                <div class="col-md-6 imgclose">
+                                    {{item.fileSize}} kb
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="upbtnnav">
+                <button class="btn-Upload btn" (click)="submitInstructions()">Upload</button>&nbsp;<button
+                    class="btn-Upload btn" (click)="cancelUploadedInstructions()">Cancel</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="mt-5"></div>
+
+    <div class="text-end my-4 mt-3">
+        <!-- <button class="Save-btn btn" type="button">SAVE</button>
+       <button class="Cancel-btn btn mx-2" type="button" routerLink="/client-workflow">Back</button> -->
+        <button class="Save-btn btn" type="button" routerLink="/client-workflow">Back</button>
+    </div>
+</div>

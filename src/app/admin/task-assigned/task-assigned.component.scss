@@ -1,0 +1,57 @@
+.cross-icon{
+    cursor: pointer;
+}
+.star-mark {
+    color: brown;
+    font-size: 15px;
+}
+.taskName-heading{
+    font-weight: bold;
+    color: #212121;
+}
+.taskName-para{
+    color: #424242;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+}
+.TaskAssingn-btn{
+    font-style: normal;
+    line-height: 19px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    background-color: #A72037;
+    padding: 5px 12px;
+    height: 43.4px;
+    color: #FFFFFF;
+    gap: 10px;
+    border-radius: 8px;
+    width: 134px;
+    font-size: 16px;
+}
+.form-label {
+    font-family: "Inter', sans-serif";
+    display: flex;
+    color: #6d6d6d;
+ }
+ .req-txt{
+    color: #6D6D6D;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 15px;
+    margin-top: 1.5rem;
+ }
+
+ .categories-btn {
+  background: #fff;
+  color: #448087;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #448087;
+  cursor: pointer;
+}
+.example-margin {
+  margin: 0 12px;
+}

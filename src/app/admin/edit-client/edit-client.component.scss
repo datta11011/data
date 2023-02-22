@@ -1,0 +1,212 @@
+.AddContact-btn {
+  border: 0.1rem solid #448087;
+  border-radius: 20px;
+  background: transparent;
+  font-family: "Inter', sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #448087;
+  height: 31px;
+  width: 147px;
+  }
+  .addclient-txt{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+  }
+ .star-mark{
+ color:red;
+ }
+
+ label{
+  color: #6D6D6D;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+ }
+
+ .clientAddBtn{
+    color: #fff;
+    background-color: #a72037;
+    border-radius: 45px;
+    padding: 10px 30px;
+    border: 1px solid #a72037;
+    font-size: 12px;
+ }
+ .clientCancelBtn{
+    color: #a72037;
+    background-color: transparent;
+    border-radius: 45px;
+    padding: 10px 25px;
+    border: 1px solid #a72037;
+    font-size: 12px;
+ }
+ .clientBodyBg{
+  background-color: #F0F0F0;
+ }
+
+.cancel-save-container{
+ float: right;
+ text-align: center;
+ padding-bottom: 20px;
+}
+
+.fieldMakrpr{
+  padding-bottom: 20px;
+}
+
+.cancel{
+  width: 80px;
+  font-size: 14px;
+  border: 1px solid #a72037;
+  color: #a72037;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-right: 10px;
+  padding: 0 !important;
+  line-height: 2 !important;
+  outline: none !important;
+  border-radius: 50px;
+}
+.submit {
+  width: 80px;
+  font-size: 14px;
+  border: 1px solid #a72037;
+  color: white;
+  background-color: #a72037;
+  padding-top: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-right: 10px;
+  padding: 0 !important;
+  line-height: 2 !important;
+  outline: none !important;
+  border-radius: 50px;
+}
+.Contacts-txt{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  color: #6D6D6D;
+  
+}
+
+.notadded{
+  font-size: 16px;
+  color: #9A9A9A;
+}
+.filedmark-txt{
+  font-size: 14px;
+  color: #6D6D6D;
+  margin-top: 50px;
+}
+
+
+.btn-cancel{
+  background-color: #fff;
+  color: #a72037;
+  padding: 7px 30px;
+  border-radius: 25px;
+  border: 0.1rem solid #a72037;
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+  width: 144px;
+}
+.btn-add{
+  background-color: #a72037;
+  color: #fff;
+  padding: 7px 40px;
+  border-radius: 25px;
+  border: 0.1rem solid #a72037;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  width: 144px;
+}
+.Add-text{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+color: #6D6D6D;
+}
+.responsivetbl{
+  max-width: 100%;
+  overflow: auto;
+}
+td{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: rgba(0, 0, 0, 0.87);
+}
+th{
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+color: rgba(0, 0, 0, 0.87);
+  border-bottom: 2px solid transparent !important;
+}
+.thead-bg{
+  background-color: #f0f0f0;
+}
+.edit-pen{
+  margin-right: 1rem;
+  cursor: pointer;
+  i{
+    font-size: 15px;
+    color: #448087;
+  }
+}
+
+.del-icon{
+  cursor: pointer;
+ 
+  i{
+        font-size: 15px;
+        color: #448087;
+      }
+}
+
+.form-label{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+color: #6D6D6D;
+
+}
+.form-control{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+color: #424242;
+}
+.form-select{
+  font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+color: #424242;
+}
+.close{
+  background-color: #575656;
+    color: white;
+    border-radius: 27px;
+    padding: 6px;
+    width: 24px;
+    font-size: 11px;
+  
+}

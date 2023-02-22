@@ -1,0 +1,376 @@
+.bgblue-color {
+    background-color: #448087;
+    padding: 1%;
+}
+.bgBody-color{
+  background-color: #F9F9F9;
+}
+
+.footer{
+    margin-top: 159px;
+}
+
+.month {
+    color: skyblue;
+  }
+  .font25{
+    font-family: "'Inter', sans-serif";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+  }
+  .active {
+    margin-bottom: 0;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .card-header{
+    background-color: #fff;
+    padding: 1rem;
+  }
+  .clr-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+color: #192A3E;
+  }
+  .selectmonth{
+    padding: 0;
+    min-width: 120px;
+    margin-left: auto;
+    border: none;
+    display: flex; 
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+    .form-select{
+      border: none;
+      padding: 0.075rem 1.95rem 0.075rem 0.45rem;
+      color: #2dc4ff;
+      box-shadow: none !important;
+      text-align: left;
+      font-family: ''Inter', sans-serif';
+      font-style: normal;
+     font-weight: 400;
+      font-size: 12px;
+    }
+   
+  }
+  .font13{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+line-height: 16px;
+  }
+  .internal-pad-1{
+    font-size: 16px;
+    width: 150px;
+    height: 150px;
+    padding: 2.9rem 0.1rem;
+    border-radius: 100px;
+    border: 5px solid #F7931E;
+    margin-top: -23px;
+    text-align: center;
+    margin-left: 37px;
+  }
+
+  .product-text{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: #0F0F0F;
+  }
+
+  @media screen and (max-width:768px) {
+  
+    .status-color{
+      text-align: center;
+      margin-top: 1rem;
+    }
+  }
+  
+  .User-onboarded{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: #192A3E;
+  }
+
+  .time-text{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+color: rgba(0, 0, 0, 0.6);
+  }
+.zero{
+    font-family: ''Inter', sans-serif';
+    font-weight: bold;
+    font-size: 42px;
+text-align: center;
+color: #0F0F0F;
+}
+.available-text-1{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+color: #F26666;
+
+}
+.available-text-2{
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+    color: #59BB5E;
+   
+}
+.color-progress{
+    height: 5px;
+    background-color: #ccc;
+}
+
+.range-count{
+  font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+color: rgba(0, 0, 0, 0.6);
+    list-style: none;
+    padding: 0;
+    margin-top: -15px;
+    display: flex;
+    justify-content: space-between;
+}
+.f-right{
+    float: right;
+  }
+  h5{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+  .admin-type{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #535353;
+  }
+  .progess-status{
+   justify-content: space-evenly;
+  }
+  .card-header{
+    background-color: #FFFFFF;
+  
+  }
+  .top-contact{
+    margin-bottom: -13px;
+  }
+  .profile-text{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+   font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #535353;
+  }
+  .progress-bar{
+    color: #2E7D32;
+  }
+  .completed{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+color: #2E7D32;
+  }
+  .progress-bar1{
+    height: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  .progress-bar1::before {
+    content: '';
+    display: flex;
+    justify-content: flex-end;
+    width: calc(var(--percent) * 1%);
+    height: 100%;
+    background: #772FB8;
+    white-space: nowrap;
+  }
+  
+  .profile{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 25px;
+  color: #192A3E;
+  }
+  
+  .user-name{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 26px;
+color: #000000;
+  }
+  
+  .percentage{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+ font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #6D6D6D;
+  }
+  .profile-p{
+    font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+  color: #374151;
+  }
+.hold-text{
+  font-family: 'Inter', sans-serif;
+font-weight: bold;
+font-size:16px;
+color: #424242;
+
+}
+  .Complete-btn{
+    border-radius: 20px;
+    background-color: #A72037;
+    color: white;
+  }
+  .zero-number{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #424242;
+  }
+  .review-text{
+    font-family: 'Montserrat';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 145%;
+color: #9A9A9A;
+  }
+  .review-text-1{
+    font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 20px;
+color: #535353;
+  }
+  .rating-text{
+    text-align: right;
+    margin-top: -40px;
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+color: #6A707E;
+  }
+  .number-3{
+    font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: 400;
+font-size: 12px;
+color: #2E7D32;
+  }
+  .resp-space-graph{
+    margin-top: -360px;
+  }
+  .average-text{
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .p-name{
+    font-family: ''Inter', sans-serif';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 20px;
+    color: #374151;
+  }
+  .color-box{
+    color: #064377;
+    background: #064377;
+    }
+    .color-box-1{
+      
+        color: #59BB5E;
+        background: #59BB5E;
+    }
+    .graph-number{
+      font-family: ''Inter', sans-serif';
+font-style: normal;
+font-weight: bold;
+font-size: 42px;
+       
+    }
+
+    .form-select{
+        appearance:none;
+        -webkit-appearance:none;
+        -moz-appearance:none;
+        -ms-appearance:none;
+        background-position: calc(100% - 12px) center !important;
+        background: url("data:image/svg+xml,<svg height='10px' width='10px' viewBox='0 0 16 16' fill='%23000000' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") no-repeat;
+        padding: 8px 32px 8px 16px;
+       
+    }
+    /* To remove the arrow of select element in IE */
+    .form-select::-ms-expand {
+      display: none;
+    }
+    .program-text{
+      font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+color: rgba(0, 0, 0, 0.6);
+    }
+    .graph-text1{
+      font-family: 'Inter', sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+color: rgba(0, 0, 0, 0.6);
+    }
+    .empty-text{
+      margin-top: 20px;
+    }
+
+
+    .side-text{
+      font-family: ''Inter', sans-serif';
+    font-style: normal;
+   font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #192A3E;
+    }

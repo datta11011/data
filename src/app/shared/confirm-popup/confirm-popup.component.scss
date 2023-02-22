@@ -1,0 +1,45 @@
+.close-wrapper {
+  display: flex;
+  justify-content: end;
+  & .icon {
+    background: #333;
+    color: #fff;
+    border-radius: 100px;
+    font-size: 20px;
+  }
+}
+.heading-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  h1 {
+    font-size: 18px;
+  }
+  .warning {
+    color: orange;
+  }
+  .danger {
+    color: red;
+  }
+}
+
+::ng-deep.mat-stroked-button {
+  border-color:  1px solid #A72037;
+  color: #A72037;
+  padding: 0px 35px;
+  background-color: #fff;
+
+}
+::ng-deep.mat-raised-button {
+  background-color: #A72037;
+  color: #fff;
+  margin-left: 18px;
+  padding: 0px 35px;
+}
+
+.mat-stroked-button {
+  border-color: #A72037;
+}
+
+
+
